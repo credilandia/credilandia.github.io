@@ -1,125 +1,139 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <header>
-  <img src="logo.jpg" class="banner">
-  <div class="titulo-overlay">🎡Credilandia🎡</div>
-</header>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
+<title>Credilandia</title>
 
-    <style>
-        .header {
-  position: relative;
-  text-align: center;
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+
+<style>
+
+body {
+    margin: 0;
+    font-family: Arial;
+    background-color: #f8f6f3;
+    text-align: center;
+}
+
+/* HEADER */
+.header {
+    position: relative;
 }
 
 .banner {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  display: block;
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .titulo-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: 'Playfair Display', serif;
-  font-size: 42px;
-  color: #d4af37;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    color: #d4af37;
+    text-align: center;
+    width: 100%;
 }
-<style>
-        body {
-            font-family: Arial;
-            background-color: #f8f6f3;
-            text-align: center;
-        }
 
-        h1 {
-            color: #b48a5a;
-        }
+/* TEXTO */
+.subtitulo {
+    margin: 15px;
+    color: #555;
+}
 
-        .producto {
-            background: white;
-            margin: 20px;
-            padding: 15px;
-            border-radius: 15px;
-            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-        }
+/* PRODUCTOS */
+.producto {
+    background: white;
+    margin: 20px;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    display: inline-block;
+    width: 200px;
+}
 
-        img {
-            width: 150px;
-            border-radius: 10px;
-        }
+.producto img {
+    width: 100%;
+    border-radius: 10px;
+}
 
-        .disponible {
-            color: green;
-            font-weight: bold;
-        }
+/* STOCK */
+.disponible {
+    color: green;
+    font-weight: bold;
+}
 
-        .poco {
-            color: orange;
-            font-weight: bold;
-        }
+.poco {
+    color: orange;
+    font-weight: bold;
+}
 
-        .agotado {
-            color: red;
-            font-weight: bold;
-        }
+.agotado {
+    color: red;
+    font-weight: bold;
+}
 
-        button {
-            padding: 10px;
-            background-color: #b48a5a;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-    </style>
+/* BOTÓN */
+button {
+    padding: 10px;
+    background-color: #b48a5a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: black;
+}
+
+</style>
 </head>
 
 <body>
 
-    <h1>🎡Credilandia 🎡</h1>
-    <p>Perfumería de diseñador y fragancias árabes 100% originales</p>
+<!-- HEADER CORRECTO -->
+<header class="header">
+  <img src="logo.jpg" class="banner">
+  <div class="titulo-overlay">Credilandia</div>
+</header>
 
-    <hr>
+<p class="subtitulo">Perfumería de diseñador y fragancias árabes 100% originales</p>
 
-    <h2>Catálogo</h2>
+<hr>
 
-    <!-- PRODUCTO 1 -->
-    <div class="producto">
-        <img src="https://fimgs.net/mdimg/perfume/o.62261.jpg" alt="Perfume">
-        <h3>CUBA WINNER</h3>
-        <p>$314</p>
-        <p class="disponible">Disponibles: 2</p>
-        <button onclick="window.open('https://wa.me/2293749393')">
-            Comprar
-        </button>
-    </div>
+<h2>Catálogo</h2>
 
-    <!-- PRODUCTO 2 -->
-    <div class="producto">
-        <img src="https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/1/0/101321777_1.jpg" alt="Perfume">
-        <h3>360° BLACK PERRY ELLIS</h3>
-        <p>$806</p>
-        <p class="poco">Disponibles: 1</p>
-        <button onclick="window.open('https://wa.me/2293749393')">
-            Comprar
-        </button>
-    </div>
+<!-- PRODUCTO 1 -->
+<div class="producto">
+    <img src="https://fimgs.net/mdimg/perfume/o.62261.jpg">
+    <h3>CUBA WINNER</h3>
+    <p>$314</p>
+    <p class="disponible">Disponibles: 2</p>
+    <button onclick="window.open('https://wa.me/2293749393')">Comprar</button>
+</div>
 
-    <!-- PRODUCTO 3 -->
-    <div class="producto">
-        <img src="https://via.placeholder.com/150" alt="Perfume">
-        <h3>Bade’e Al Oud 🔥</h3>
-        <p>$650</p>
-        <p class="agotado">Agotado</p>
-        <button onclick="window.open('https://wa.me/2293749393')">
-            Comprar
-        </button>
-    </div>
+<!-- PRODUCTO 2 -->
+<div class="producto">
+    <img src="https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/1/0/101321777_1.jpg">
+    <h3>360° BLACK PERRY ELLIS</h3>
+    <p>$806</p>
+    <p class="poco">Disponibles: 1</p>
+    <button onclick="window.open('https://wa.me/2293749393')">Comprar</button>
+</div>
+
+<!-- PRODUCTO 3 -->
+<div class="producto">
+    <img src="https://via.placeholder.com/150">
+    <h3>Bade’e Al Oud 🔥</h3>
+    <p>$650</p>
+    <p class="agotado">Agotado</p>
+    <button onclick="window.open('https://wa.me/2293749393')">Comprar</button>
+</div>
 
 </body>
 </html>
