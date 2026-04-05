@@ -13,19 +13,11 @@ body {
     text-align: center;
 }
 
-/* HEADER */
 .banner {
     width: 100%;
-    display: block;
 }
 
-/* TEXTO */
-.subtitulo {
-    margin: 20px;
-    color: #555;
-}
-
-/* BOTONES CATEGORÍAS */
+/* BOTONES */
 .categorias {
     margin: 20px;
 }
@@ -40,11 +32,7 @@ body {
     cursor: pointer;
 }
 
-.categorias button:hover {
-    background-color: black;
-}
-
-/* GRID PRODUCTOS */
+/* GRID */
 .contenedor-productos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -62,8 +50,61 @@ body {
 
 .producto img {
     width: 100%;
-    border-radius: 10px;
 }
 
 /* STOCK */
-.disponible { color: green; font-weight
+.disponible { color: green; }
+.poco { color: orange; }
+.agotado { color: red; }
+
+button {
+    padding: 10px;
+    background-color: #b48a5a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+</style>
+</head>
+
+<body>
+
+<img src="logo.jpg" class="banner">
+
+<h2>Catálogo</h2>
+
+<!-- BOTONES -->
+<div class="categorias">
+    <button onclick="mostrar('caballero')">Caballero</button>
+    <button onclick="mostrar('dama')">Dama</button>
+    <button onclick="mostrar('unisex')">Unisex</button>
+    <button onclick="mostrar('ninos')">Niños</button>
+</div>
+
+<!-- CABALLERO -->
+<div id="caballero" class="contenedor-productos">
+
+<div class="producto">
+    <img src="https://intranet.ufra.com.mx/img/products/catalog/16310/16310_1.jpg">
+    <h3>FIRST INSTINCT</h3>
+    <p>$922</p>
+    <p class="disponible">Disponibles: 2</p>
+</div>
+
+<div class="producto">
+    <img src="https://intranet.ufra.com.mx/img/products/catalog/16958/16958_1.jpg">
+    <h3>FIERCE</h3>
+    <p>$1186</p>
+    <p class="disponible">Disponibles: 2</p>
+</div>
+
+</div>
+
+<!-- DAMA -->
+<div id="dama" class="contenedor-productos" style="display:none;">
+</div>
+
+<!-- UNISEX -->
+<div id="unisex" class="contenedor-productos"
