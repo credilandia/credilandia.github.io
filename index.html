@@ -25,6 +25,25 @@ body {
     color: #555;
 }
 
+/* BOTONES CATEGORÍAS */
+.categorias {
+    margin: 20px;
+}
+
+.categorias button {
+    margin: 5px;
+    padding: 10px 15px;
+    background-color: #b48a5a;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.categorias button:hover {
+    background-color: black;
+}
+
 /* GRID PRODUCTOS */
 .contenedor-productos {
     display: grid;
@@ -47,77 +66,4 @@ body {
 }
 
 /* STOCK */
-.disponible { color: green; font-weight: bold; }
-.poco { color: orange; font-weight: bold; }
-.agotado { color: red; font-weight: bold; }
-
-/* BOTÓN */
-button {
-    padding: 10px;
-    background-color: #b48a5a;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    margin-top: 10px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: black;
-}
-
-</style>
-</head>
-
-<body>
-
-<img src="logo.jpg" class="banner">
-
-<p class="subtitulo">Perfumería de diseñador y fragancias árabes 100% originales</p>
-
-<hr>
-
-<h2>Catálogo</h2>
-
-<div class="contenedor-productos">
-
-<!-- PRODUCTO 1 -->
-<div class="producto">
-    <img src="https://intranet.ufra.com.mx/img/products/catalog/16310/16310_1.jpg">
-    <h3>ABERCROMBIE & FITCH FIRST INSTINCT</h3>
-    <p>$922.00</p>
-    <p class="disponible">Disponibles: 2</p>
-    <button onclick="window.open('https://wa.me/2293749393')">Comprar</button>
-</div>
-
-<!-- PRODUCTO 2 -->
-<div class="producto">
-    <img src="https://intranet.ufra.com.mx/img/products/catalog/16958/16958_1.jpg">
-    <h3>ABERCROMBIE & FITCH FIERCE</h3>
-    <p>$1,186.00</p>
-    <p class="disponible">Disponibles: 2</p>
-    <button onclick="window.open('https://wa.me/2293749393')">Comprar</button>
-</div>
-
-<!-- PRODUCTO 3 -->
-<div class="producto">
-    <img src="https://intranet.ufra.com.mx/img/products/catalog/32205/32205_1.jpg">
-    <h3>ADIDAS VICTORY LEAGUE</h3>
-    <p>$233.00</p>
-    <p class="disponible">Disponibles: 4</p>
-    <button onclick="window.open('https://wa.me/2293749393')">Comprar</button>
-</div>
-
-<!-- PRODUCTO 4 -->
-<div class="producto">
-    <img src="https://intranet.ufra.com.mx/img/products/catalog/07021/07021_1.jpg">
-    <h3>SUPREMACY NOT ONLY INTENSE</h3>
-    <p>$1,176.00</p>
-    <p class="poco">Disponibles: 1</p>
-    <button onclick="window.open('https://wa.me/2293749393')">Comprar</button>
-</div>
-
-</div>
-
-</body>
-</html>
+.disponible { color: green; font-weight
