@@ -163,7 +163,7 @@ Descubre perfumes originales de diseñador y fragancias árabes que combinan luj
     </a>
 </div>
 
-<script>
+    <script>
 function mostrar(cat, btn) {
     document.getElementById("caballero").style.display = "none";
     document.getElementById("dama").style.display = "none";
@@ -177,7 +177,6 @@ function mostrar(cat, btn) {
     btn.classList.add('activo');
 }
 
-/* 🔥 CARGA AUTOMÁTICA DESDE TU CSV */
 fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/perfumes.csv')
 .then(res => res.text())
 .then(data => {
@@ -190,16 +189,20 @@ fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/
 
         if(datos.length < 8) return;
 
-        let categoria = datos[0]?.trim().toLowerCase();
-        let nombre = datos[1]?.trim();
-        let precio = datos[2]?.trim();
+        let nombre = datos[0]?.trim();
+        let categoria = datos[1]?.trim().toLowerCase();
+        let precio = datos[2]?.replace(/["$ ]/g, '');
         let stock = parseInt(datos[3]);
         let ml = datos[4]?.trim();
         let tipo = datos[5]?.trim();
         let aroma = datos[6]?.trim();
         let imagen = datos[7]?.trim();
 
-        if(!nombre) return;
+        if(!nombre || !categoria) return;
+
+        if(!imagen.startsWith('http')){
+            imagen = `https://intranet.ufra.com.mx/img/products/catalog/${imagen}/${imagen}_1.jpg`;
+        }
 
         let estado = "disponible";
         let textoStock = "Disponibles: " + stock;
@@ -225,6 +228,7 @@ fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/
         `;
 
         const contenedor = document.getElementById(categoria);
+
         if(contenedor){
             contenedor.innerHTML += producto;
         }
@@ -233,6 +237,6 @@ fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/
 
 });
 </script>
-
+    
 </body>
 </html>
