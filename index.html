@@ -99,7 +99,9 @@ button {
     <h3>FIRST INSTINCT</h3>
     <p>$922</p>
     <p class="disponible">Disponibles: 2</p>
-    <button onclick="comprar('FIRST INSTINCT')">Comprar</button>
+    <a href="https://wa.me/2293749393?text=Hola%20me%20interesa%20el%20perfume%20FIRST%20INSTINCT" target="_blank">
+        <button>Comprar</button>
+    </a>
 </div>
 
 <div class="producto">
@@ -107,7 +109,9 @@ button {
     <h3>FIERCE</h3>
     <p>$1186</p>
     <p class="disponible">Disponibles: 2</p>
-    <button onclick="comprar('FIERCE')">Comprar</button>
+    <a href="https://wa.me/2293749393?text=Hola%20me%20interesa%20el%20perfume%20FIERCE" target="_blank">
+        <button>Comprar</button>
+    </a>
 </div>
 
 </div>
@@ -120,7 +124,9 @@ button {
     <h3>ARIANA GRANDE CLOUD</h3>
     <p>$2155</p>
     <p class="poco">Disponibles: 1</p>
-    <button onclick="comprar('ARIANA GRANDE CLOUD')">Comprar</button>
+    <a href="https://wa.me/2293749393?text=Hola%20me%20interesa%20el%20perfume%20ARIANA%20GRANDE%20CLOUD" target="_blank">
+        <button>Comprar</button>
+    </a>
 </div>
 
 </div>
@@ -133,7 +139,9 @@ button {
     <h3>HARAMAIN AMBER OUD ROUGE</h3>
     <p>$1764</p>
     <p class="poco">Disponibles: 1</p>
-    <button onclick="comprar('HARAMAIN AMBER OUD ROUGE')">Comprar</button>
+    <a href="https://wa.me/2293749393?text=Hola%20me%20interesa%20el%20perfume%20HARAMAIN%20AMBER%20OUD%20ROUGE" target="_blank">
+        <button>Comprar</button>
+    </a>
 </div>
 
 </div>
@@ -146,7 +154,9 @@ button {
     <h3>TUBBES CANDY POP</h3>
     <p>$446</p>
     <p class="disponible">Disponibles: 2</p>
-    <button onclick="comprar('TUBBES CANDY POP')">Comprar</button>
+    <a href="https://wa.me/2293749393?text=Hola%20me%20interesa%20el%20perfume%20TUBBES%20CANDY%20POP" target="_blank">
+        <button>Comprar</button>
+    </a>
 </div>
 
 </div>
@@ -159,14 +169,6 @@ function mostrar(cat) {
     document.getElementById("ninos").style.display = "none";
 
     document.getElementById(cat).style.display = "grid";
-}
-
-function comprar(nombre) {
-    let numero = "2293749393";
-    let mensaje = "Hola, me interesa el perfume " + nombre;
-    let url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(mensaje);
-    
-    window.open(url, "_blank");
 }
 </script>
 
