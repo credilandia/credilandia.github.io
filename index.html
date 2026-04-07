@@ -17,20 +17,30 @@ body {
     width: 100%;
 }
 
+/* TEXTO DE PRESENTACIÓN */
+.descripcion {
+    padding: 15px;
+    font-size: 18px;
+    color: #333;
+    max-width: 800px;
+    margin: auto;
+}
+
 /* BOTONES BONITOS */
 .categorias {
     margin: 20px;
 }
 
 .categorias button {
-    margin: 8px;
-    padding: 12px 18px;
+    margin: 10px;
+    padding: 15px 22px; /* más grandes */
     background: linear-gradient(135deg, #d4af37, #b48a5a);
     color: white;
     border: none;
     border-radius: 25px;
     cursor: pointer;
     font-weight: bold;
+    font-size: 16px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     transition: all 0.3s ease;
 }
@@ -38,6 +48,11 @@ body {
 .categorias button:hover {
     transform: translateY(-3px) scale(1.05);
     box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+}
+
+/* BOTÓN ACTIVO */
+.categorias button.activo {
+    background: #8b5e34;
 }
 
 /* GRID */
@@ -74,6 +89,27 @@ button {
     cursor: pointer;
 }
 
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .contenedor-productos {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* FOOTER */
+.footer {
+    padding: 20px;
+    background-color: #eee;
+    margin-top: 30px;
+}
+
+.footer a {
+    display: block;
+    margin: 5px;
+    color: #333;
+    text-decoration: none;
+}
+
 </style>
 </head>
 
@@ -81,14 +117,18 @@ button {
 
 <img src="logo.jpg" class="banner">
 
+<div class="descripcion">
+Descubre perfumes originales de diseñador y fragancias árabes que combinan lujo, intensidad y personalidad única.
+</div>
+
 <h2>Catálogo</h2>
 
 <!-- BOTONES -->
 <div class="categorias">
-    <button onclick="mostrar('caballero')">Caballero</button>
-    <button onclick="mostrar('dama')">Dama</button>
-    <button onclick="mostrar('unisex')">Unisex</button>
-    <button onclick="mostrar('ninos')">Niños</button>
+    <button onclick="mostrar('caballero', this)">Caballero</button>
+    <button onclick="mostrar('dama', this)">Dama</button>
+    <button onclick="mostrar('unisex', this)">Unisex</button>
+    <button onclick="mostrar('ninos', this)">Niños</button>
 </div>
 
 <!-- CABALLERO -->
@@ -161,14 +201,25 @@ button {
 
 </div>
 
+<!-- FOOTER -->
+<div class="footer">
+    <a href="https://maps.app.goo.gl/UzRPx3WhWyhUQ7C3A" target="_blank">📍 Ver ubicación</a>
+    <a href="https://www.instagram.com/credilandiaxl?igsh=MWwzYWc3M2JsbXNjbQ==" target="_blank">📸 Instagram</a>
+    <a href="https://www.facebook.com/share/1bhKAZjdwc/" target="_blank">📘 Facebook</a>
+</div>
+
 <script>
-function mostrar(cat) {
+function mostrar(cat, btn) {
     document.getElementById("caballero").style.display = "none";
     document.getElementById("dama").style.display = "none";
     document.getElementById("unisex").style.display = "none";
     document.getElementById("ninos").style.display = "none";
 
     document.getElementById(cat).style.display = "grid";
+
+    let botones = document.querySelectorAll('.categorias button');
+    botones.forEach(b => b.classList.remove('activo'));
+    btn.classList.add('activo');
 }
 </script>
 
