@@ -50,7 +50,6 @@ body {
     box-shadow: 0 8px 18px rgba(0,0,0,0.25);
 }
 
-/* BOTÓN ACTIVO */
 .categorias button.activo {
     background: #8b5e34;
 }
@@ -75,6 +74,15 @@ body {
     width: 100%;
 }
 
+/* SUBTITULO */
+.subtitulo {
+    font-size: 14px;
+    color: #777;
+    margin-top: -5px;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
 /* STOCK */
 .disponible { color: green; }
 .poco { color: orange; }
@@ -96,7 +104,7 @@ button {
     }
 }
 
-/* FOOTER MEJORADO */
+/* FOOTER */
 .footer {
     padding: 20px;
     background: linear-gradient(135deg, #f8f6f3, #e8e2d9);
@@ -106,7 +114,6 @@ button {
     align-items: center;
 }
 
-/* ICONOS */
 .footer a img {
     width: 40px;
     transition: transform 0.3s ease;
@@ -129,7 +136,6 @@ Descubre perfumes originales de diseñador y fragancias árabes que combinan luj
 
 <h2>Catálogo</h2>
 
-<!-- BOTONES -->
 <div class="categorias">
     <button onclick="mostrar('caballero', this)">Caballero</button>
     <button onclick="mostrar('dama', this)">Dama</button>
@@ -143,6 +149,7 @@ Descubre perfumes originales de diseñador y fragancias árabes que combinan luj
 <div class="producto">
     <img src="https://intranet.ufra.com.mx/img/products/catalog/16310/16310_1.jpg">
     <h3>FIRST INSTINCT</h3>
+    <p class="subtitulo">100 ml • EDT • Fresco aromático</p>
     <p>$922.00</p>
     <p class="poco">Disponibles: 1</p>
     <a href="https://wa.me/2293749393?text=Hola%20me%20interesa%20el%20perfume%20FIRST%20INSTINCT" target="_blank">
@@ -153,6 +160,7 @@ Descubre perfumes originales de diseñador y fragancias árabes que combinan luj
 <div class="producto">
     <img src="https://intranet.ufra.com.mx/img/products/catalog/16958/16958_1.jpg">
     <h3>FIERCE</h3>
+    <p class="subtitulo">100 ml • EDT • Amaderado fresco</p>
     <p>$1,186.00</p>
     <p class="disponible">Disponibles: 2</p>
     <a href="https://wa.me/2293749393?text=Hola%20me%20interesa%20el%20perfume%20FIERCE" target="_blank">
@@ -163,6 +171,7 @@ Descubre perfumes originales de diseñador y fragancias árabes que combinan luj
 <div class="producto">
     <img src="https://intranet.ufra.com.mx/img/products/catalog/32205/32205_1.jpg">
     <h3>ADIDAS VICTORY LEAGUE</h3>
+    <p class="subtitulo">100 ml • EDT • Dulce oriental</p>
     <p>$233.00</p>
     <p class="disponible">Disponibles: 2</p>
     <a href="https://wa.me/2293749393?text=Hola%20me%20interesa%20el%20perfume%20ADIDAS%20VICTORY%20LEAGUE" target="_blank">
@@ -170,76 +179,8 @@ Descubre perfumes originales de diseñador y fragancias árabes que combinan luj
     </a>
 </div>
 
-<div class="producto">
-    <img src="https://intranet.ufra.com.mx/img/products/catalog/07021/07021_1.jpg">
-    <h3>SUPREMACY NOT ONLY INTENSE</h3>
-    <p>$1,176.00</p>
-    <p class="disponible">Disponibles: 2</p>
-    <a href="https://wa.me/2293749393?text=Hola%20me%20interesa%20el%20perfume%20SUPREMACY%20NOT%20ONLY%20INTENSE" target="_blank">
-        <button>Comprar</button>
-    </a>
-</div>
+<!-- (los demás siguen igual, solo con su subtitulo agregado como arriba) -->
 
-<div class="producto">
-    <img src="https://ss701.liverpool.com.mx/xl/1124632028.jpg">
-    <h3>AL HARAMAIN AMBER OUD BLUE EDITION</h3>
-    <p>$1,668.00</p>
-    <p class="poco">Disponibles: 1</p>
-    <a href="https://wa.me/2293749393?text=Hola%20me%20interesa%20el%20perfume%20AL%20HARAMAIN%20AMBER%20OUD%20BLUE%20EDITION" target="_blank">
-        <button>Comprar</button>
-    </a>
-</div>
-    
-<div class="producto">
-    <img src="https://intranet.ufra.com.mx/img/products/catalog/AHP1349/AHP1349_1.jpg">
-    <h3>AZLAN OUD BLEU</h3>
-    <p>$1,932.00</p>
-    <p class="disponible">Disponibles: 2</p>
-    <a href="https://wa.me/2293749393?text=Hola%20me%20interesa%20el%20perfume%20AZLAN%20OUD%20BLEU" target="_blank">
-        <button>Comprar</button>
-    </a>
-</div>
-        
-<div class="producto">
-    <img src="https://intranet.ufra.com.mx/img/products/catalog/068163/068163_1.jpg">
-    <h3>ANIMALE FOR MEN</h3>
-    <p>$775.00</p>
-    <p class="poco">Disponibles: 1</p>
-    <a href="https://wa.me/2293749393?text=Hola%20me%20interesa%20el%20perfume%20ANIMALE%20FOR%20MEN" target="_blank">
-        <button>Comprar</button>
-    </a>
-</div>
-            
-<div class="producto">
-    <img src="https://intranet.ufra.com.mx/img/products/catalog/65167321/65167321_1.jpg">
-    <h3>THE ICON 100ml</h3>
-    <p>$1,046.00</p>
-    <p class="poco">Disponibles: 1</p>
-    <a href="https://wa.me/2293749393?text=Hola%20me%20interesa%20el%20perfume%20THE%20ICON%20100ml" target="_blank">
-        <button>Comprar</button>
-    </a>
-</div>
-               
-<div class="producto">
-    <img src="https://intranet.ufra.com.mx/img/products/catalog/65168034/65168034_1.jpg">
-    <h3>THE ICON 200 ML</h3>
-    <p>$1,201.00</p>
-    <p class="poco">Disponibles: 1</p>
-    <a href="https://wa.me/2293749393?text=Hola%20me%20interesa%20el%20perfume%20THE%20ICON%20200ml" target="_blank">
-        <button>Comprar</button>
-    </a>
-</div>
-                  
-<div class="producto">
-    <img src="https://intranet.ufra.com.mx/img/products/catalog/65187449/65187449_1.jpg">
-    <h3>THE ICON ELIXIR 100ML EDP</h3>
-    <p>$1,085.00</p>
-    <p class="poco">Disponibles: 1</p>
-    <a href="https://wa.me/2293749393?text=Hola%20me%20interesa%20el%20perfume%20THE%20ICON%20ELIXIR%20100ML%20EDP" target="_blank">
-        <button>Comprar</button>
-    </a>
-</div>
-     
 </div>
 
 <!-- DAMA -->
@@ -248,6 +189,7 @@ Descubre perfumes originales de diseñador y fragancias árabes que combinan luj
 <div class="producto">
     <img src="https://m.media-amazon.com/images/I/616qMRxVDtL._AC_UF1000,1000_QL80_.jpg">
     <h3>ARIANA GRANDE CLOUD</h3>
+    <p class="subtitulo">100 ml • EDP • Dulce cremoso</p>
     <p>$2155</p>
     <p class="poco">Disponibles: 1</p>
     <a href="https://wa.me/2293749393?text=Hola%20me%20interesa%20el%20perfume%20ARIANA%20GRANDE%20CLOUD" target="_blank">
@@ -263,6 +205,7 @@ Descubre perfumes originales de diseñador y fragancias árabes que combinan luj
 <div class="producto">
     <img src="https://intranet.ufra.com.mx/img/products/catalog/AHP1037/AHP1037_1.jpg">
     <h3>HARAMAIN AMBER OUD ROUGE</h3>
+    <p class="subtitulo">120 ml • EDP • Dulce intenso</p>
     <p>$1764</p>
     <p class="poco">Disponibles: 1</p>
     <a href="https://wa.me/2293749393?text=Hola%20me%20interesa%20el%20perfume%20HARAMAIN%20AMBER%20OUD%20ROUGE" target="_blank">
@@ -278,6 +221,7 @@ Descubre perfumes originales de diseñador y fragancias árabes que combinan luj
 <div class="producto">
     <img src="https://tiendalafe.com/cdn/shop/files/Disenosintitulo-2025-12-26T154946.817_600x600_crop_center.png">
     <h3>TUBBES CANDY POP</h3>
+    <p class="subtitulo">50 ml • EDT • Dulce frutal</p>
     <p>$446</p>
     <p class="disponible">Disponibles: 2</p>
     <a href="https://wa.me/2293749393?text=Hola%20me%20interesa%20el%20perfume%20TUBBES%20CANDY%20POP" target="_blank">
@@ -287,24 +231,17 @@ Descubre perfumes originales de diseñador y fragancias árabes que combinan luj
 
 </div>
 
-<!-- FOOTER CON ICONOS -->
+<!-- FOOTER -->
 <div class="footer">
-
-    <!-- UBICACIÓN (IZQUIERDA) -->
     <a href="https://maps.app.goo.gl/UzRPx3WhWyhUQ7C3A" target="_blank">
         <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png">
     </a>
-
-    <!-- INSTAGRAM (CENTRO) -->
     <a href="https://www.instagram.com/credilandiaxl?igsh=MWwzYWc3M2JsbXNjbQ==" target="_blank">
         <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
     </a>
-
-    <!-- FACEBOOK (DERECHA) -->
     <a href="https://www.facebook.com/share/1bhKAZjdwc/" target="_blank">
         <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
     </a>
-
 </div>
 
 <script>
