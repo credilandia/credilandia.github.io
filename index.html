@@ -6,6 +6,7 @@
 
 <style>
 
+
 body {
     margin: 0;
     font-family: Arial;
@@ -143,93 +144,11 @@ Descubre perfumes originales de diseñador y fragancias árabes que combinan luj
     <button onclick="mostrar('ninos', this)">Niños</button>
 </div>
 
-<!-- CABALLERO -->
-<div id="caballero" class="contenedor-productos">
-
-<div class="producto">
-    <img src="https://intranet.ufra.com.mx/img/products/catalog/16310/16310_1.jpg">
-    <h3>FIRST INSTINCT</h3>
-    <p class="subtitulo">100 ml • EDT • Fresco aromático</p>
-    <p>$922.00</p>
-    <p class="poco">Disponibles: 1</p>
-    <a href="https://wa.me/2293749393?text=Hola%20me%20interesa%20el%20perfume%20FIRST%20INSTINCT" target="_blank">
-        <button>Comprar</button>
-    </a>
-</div>
-
-<div class="producto">
-    <img src="https://intranet.ufra.com.mx/img/products/catalog/16958/16958_1.jpg">
-    <h3>FIERCE</h3>
-    <p class="subtitulo">100 ml • EDT • Amaderado fresco</p>
-    <p>$1,186.00</p>
-    <p class="disponible">Disponibles: 2</p>
-    <a href="https://wa.me/2293749393?text=Hola%20me%20interesa%20el%20perfume%20FIERCE" target="_blank">
-        <button>Comprar</button>
-    </a>
-</div>
-
-<div class="producto">
-    <img src="https://intranet.ufra.com.mx/img/products/catalog/32205/32205_1.jpg">
-    <h3>ADIDAS VICTORY LEAGUE</h3>
-    <p class="subtitulo">100 ml • EDT • Dulce oriental</p>
-    <p>$233.00</p>
-    <p class="disponible">Disponibles: 2</p>
-    <a href="https://wa.me/2293749393?text=Hola%20me%20interesa%20el%20perfume%20ADIDAS%20VICTORY%20LEAGUE" target="_blank">
-        <button>Comprar</button>
-    </a>
-</div>
-
-<!-- (los demás siguen igual, solo con su subtitulo agregado como arriba) -->
-
-</div>
-
-<!-- DAMA -->
-<div id="dama" class="contenedor-productos" style="display:none;">
-
-<div class="producto">
-    <img src="https://m.media-amazon.com/images/I/616qMRxVDtL._AC_UF1000,1000_QL80_.jpg">
-    <h3>ARIANA GRANDE CLOUD</h3>
-    <p class="subtitulo">100 ml • EDP • Dulce cremoso</p>
-    <p>$2155</p>
-    <p class="poco">Disponibles: 1</p>
-    <a href="https://wa.me/2293749393?text=Hola%20me%20interesa%20el%20perfume%20ARIANA%20GRANDE%20CLOUD" target="_blank">
-        <button>Comprar</button>
-    </a>
-</div>
-
-</div>
-
-<!-- UNISEX -->
-<div id="unisex" class="contenedor-productos" style="display:none;">
-
-<div class="producto">
-    <img src="https://intranet.ufra.com.mx/img/products/catalog/AHP1037/AHP1037_1.jpg">
-    <h3>HARAMAIN AMBER OUD ROUGE</h3>
-    <p class="subtitulo">120 ml • EDP • Dulce intenso</p>
-    <p>$1764</p>
-    <p class="poco">Disponibles: 1</p>
-    <a href="https://wa.me/2293749393?text=Hola%20me%20interesa%20el%20perfume%20HARAMAIN%20AMBER%20OUD%20ROUGE" target="_blank">
-        <button>Comprar</button>
-    </a>
-</div>
-
-</div>
-
-<!-- NIÑOS -->
-<div id="ninos" class="contenedor-productos" style="display:none;">
-
-<div class="producto">
-    <img src="https://tiendalafe.com/cdn/shop/files/Disenosintitulo-2025-12-26T154946.817_600x600_crop_center.png">
-    <h3>TUBBES CANDY POP</h3>
-    <p class="subtitulo">50 ml • EDT • Dulce frutal</p>
-    <p>$446</p>
-    <p class="disponible">Disponibles: 2</p>
-    <a href="https://wa.me/2293749393?text=Hola%20me%20interesa%20el%20perfume%20TUBBES%20CANDY%20POP" target="_blank">
-        <button>Comprar</button>
-    </a>
-</div>
-
-</div>
+<!-- CONTENEDORES VACÍOS (se llenan solos) -->
+<div id="caballero" class="contenedor-productos"></div>
+<div id="dama" class="contenedor-productos" style="display:none;"></div>
+<div id="unisex" class="contenedor-productos" style="display:none;"></div>
+<div id="ninos" class="contenedor-productos" style="display:none;"></div>
 
 <!-- FOOTER -->
 <div class="footer">
@@ -257,6 +176,62 @@ function mostrar(cat, btn) {
     botones.forEach(b => b.classList.remove('activo'));
     btn.classList.add('activo');
 }
+
+/* 🔥 CARGA AUTOMÁTICA DESDE TU CSV */
+fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/perfumes.csv')
+.then(res => res.text())
+.then(data => {
+
+    const filas = data.split('\n').slice(1);
+
+    filas.forEach(fila => {
+
+        const datos = fila.split(',');
+
+        if(datos.length < 8) return;
+
+        let categoria = datos[0]?.trim().toLowerCase();
+        let nombre = datos[1]?.trim();
+        let precio = datos[2]?.trim();
+        let stock = parseInt(datos[3]);
+        let ml = datos[4]?.trim();
+        let tipo = datos[5]?.trim();
+        let aroma = datos[6]?.trim();
+        let imagen = datos[7]?.trim();
+
+        if(!nombre) return;
+
+        let estado = "disponible";
+        let textoStock = "Disponibles: " + stock;
+
+        if(stock === 0){
+            estado = "agotado";
+            textoStock = "Agotado";
+        } else if(stock === 1){
+            estado = "poco";
+        }
+
+        const producto = `
+        <div class="producto">
+            <img src="${imagen}">
+            <h3>${nombre}</h3>
+            <p class="subtitulo">${ml} ml • ${tipo} • ${aroma}</p>
+            <p>$${precio}</p>
+            <p class="${estado}">${textoStock}</p>
+            <a href="https://wa.me/2293749393?text=Hola me interesa el perfume ${nombre}" target="_blank">
+                <button>Comprar</button>
+            </a>
+        </div>
+        `;
+
+        const contenedor = document.getElementById(categoria);
+        if(contenedor){
+            contenedor.innerHTML += producto;
+        }
+
+    });
+
+});
 </script>
 
 </body>
