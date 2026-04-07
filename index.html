@@ -17,7 +17,7 @@ body {
     width: 100%;
 }
 
-/* BOTONES BONITOS */
+/* BOTONES */
 .categorias {
     margin: 20px;
 }
@@ -32,20 +32,18 @@ body {
     cursor: pointer;
     font-weight: bold;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    transition: all 0.3s ease;
-}
-
-.categorias button:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 8px 18px rgba(0,0,0,0.25);
 }
 
 /* GRID */
 .contenedor-productos {
-    display: grid;
+    display: none; /* 🔥 CLAVE */
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     padding: 20px;
+}
+
+.activo {
+    display: grid; /* 🔥 SOLO ESTE SE VE */
 }
 
 /* PRODUCTO */
@@ -58,20 +56,6 @@ body {
 
 .producto img {
     width: 100%;
-}
-
-/* STOCK */
-.disponible { color: green; }
-.poco { color: orange; }
-.agotado { color: red; }
-
-button {
-    padding: 10px;
-    background-color: #b48a5a;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
 </style>
@@ -92,73 +76,58 @@ button {
 </div>
 
 <!-- CABALLERO -->
-<div id="caballero" class="contenedor-productos">
+<div id="caballero" class="contenedor-productos activo">
 
 <div class="producto">
     <img src="https://intranet.ufra.com.mx/img/products/catalog/16310/16310_1.jpg">
     <h3>FIRST INSTINCT</h3>
     <p>$922</p>
-    <p class="disponible">Disponibles: 2</p>
-    <button onclick="window.open('https://wa.me/2293749393')">Comprar</button>
-</div>
-
-<div class="producto">
-    <img src="https://intranet.ufra.com.mx/img/products/catalog/16958/16958_1.jpg">
-    <h3>FIERCE</h3>
-    <p>$1186</p>
-    <p class="disponible">Disponibles: 2</p>
-    <button onclick="window.open('https://wa.me/2293749393')">Comprar</button>
 </div>
 
 </div>
 
 <!-- DAMA -->
-<div id="dama" class="contenedor-productos" style="display:none;">
+<div id="dama" class="contenedor-productos">
 
 <div class="producto">
     <img src="https://m.media-amazon.com/images/I/616qMRxVDtL._AC_UF1000,1000_QL80_.jpg">
     <h3>ARIANA GRANDE CLOUD</h3>
     <p>$2155</p>
-    <p class="poco">Disponibles: 1</p>
-    <button onclick="window.open('https://wa.me/2293749393')">Comprar</button>
 </div>
 
 </div>
 
 <!-- UNISEX -->
-<div id="unisex" class="contenedor-productos" style="display:none;">
+<div id="unisex" class="contenedor-productos">
 
 <div class="producto">
     <img src="https://intranet.ufra.com.mx/img/products/catalog/AHP1037/AHP1037_1.jpg">
-    <h3>HARAMAIN AMBER OUD ROUGE</h3>
+    <h3>AMBER OUD ROUGE</h3>
     <p>$1764</p>
-    <p class="poco">Disponibles: 1</p>
-    <button onclick="window.open('https://wa.me/2293749393')">Comprar</button>
 </div>
 
 </div>
 
 <!-- NIÑOS -->
-<div id="ninos" class="contenedor-productos" style="display:none;">
+<div id="ninos" class="contenedor-productos">
 
 <div class="producto">
     <img src="https://tiendalafe.com/cdn/shop/files/Disenosintitulo-2025-12-26T154946.817_600x600_crop_center.png">
     <h3>TUBBES CANDY POP</h3>
     <p>$446</p>
-    <p class="disponible">Disponibles: 2</p>
-    <button onclick="window.open('https://wa.me/2293749393')">Comprar</button>
 </div>
 
 </div>
 
 <script>
-function mostrar(cat) {
-    document.getElementById("caballero").style.display = "none";
-    document.getElementById("dama").style.display = "none";
-    document.getElementById("unisex").style.display = "none";
-    document.getElementById("ninos").style.display = "none";
+function mostrar(categoria) {
+    let secciones = document.querySelectorAll('.contenedor-productos');
 
-    document.getElementById(cat).style.display = "grid";
+    secciones.forEach(sec => {
+        sec.classList.remove('activo');
+    });
+
+    document.getElementById(categoria).classList.add('activo');
 }
 </script>
 
