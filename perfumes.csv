@@ -1,9 +1,9 @@
 ﻿nombre,categoria, precio ,stock,ml,tipo,aroma,imagen
 ABERCROMBIE & FITCH FIRST INSTINCT,caballero, $922.00 ,1,100,EDT,Amaderada,16310
 ABERCROMBIE & FITCH FIERCE COLOGNE,caballero," $1186.00 ",2,100,EDC,Amaderada,16958
-ADIDAS VICTORY LEAGUE,caballero, $314.00 ,3,100,EDT,Amaderada,32205
+ADIDAS VICTORY LEAGUE,caballero," $314.00 ",3,100,EDT,Amaderada,32205
 AFNAN SUPREMACY NOT ONLY INTENSE,caballero," $1680.00 ",2,100,EDP,Amaderada,https://http2.mlstatic.com/D_NQ_NP_955910-MLU73423373691_122023-O.webp
-AL HARAMAIN AMBER OUD BLUE EDITION,caballero," $1667.50 ",1,100,PARFUM,Amaderada,https://ss701.liverpool.com.mx/xl/1124632028.jpg
+AL HARAMAIN AMBER OUD BLUE EDITION,caballero," $1668.00 ",1,100,PARFUM,Amaderada,https://ss701.liverpool.com.mx/xl/1124632028.jpg
 AZLAN OUD BLEU,caballero," $1932.00 ",2,100,EDP,Amaderada,AHP1349
 ANIMALE FOR MEN,caballero, $775.00 ,1,100,EDT,Amaderada,68163
 THE ICON,caballero," $1046.00 ",1,100,EDT,Amaderada,65167321
@@ -29,7 +29,7 @@ BURBERRY HERO REFILLABLE,caballero," $3255.00 ",2,100,EDP,Amaderada,83801
 BVLGARI MAN RAIN ESSENCE,caballero," $2992.00 ",1,100,EDP,Amaderada,I0091746
 BVLGARI MAN GLACIAL ESSENCE,caballero," $2992.00 ",1,100,EDP,Amaderada,I0091753
 BVLGARI MAN TERRAE ESSENCE,caballero," $2992.00 ",1,100,EDP,Amaderada,I0091912
-OBSESSION NIGHT,caballero, $884.00 ,1,125,EDT,Amaderada,1006140
+OBSESSION NIGHT,caballero," $884.00 ",1,125,EDT,Amaderada,1006140
 OBSESSION FOR MEN,caballero," $1209.00 ",2,125,EDT,Amaderada,10651
 ETERNITY FOR MEN,caballero," $1209.00 ",2,100,EDT,Amaderada,10551
 CK BE,caballero," $1070.00 ",3,100,EDT,Amaderada,10440
@@ -49,18 +49,18 @@ CHIC FOR MEN,caballero," $2488.00 ",1,100,EDT,Amaderada,6001160
 CH MEN PASIÓN,caballero," $2705.00 ",1,100,EDP,Amaderada,65186839
 CH MEN,caballero," $2728.00 ",2,100,EDT,Amaderada,6792
 CK ONE,caballero," $1070.00 ",3,100,EDT,Amaderada,10740
-COOL WATER,caballero, $930.00 ,1,125,EDT,Amaderada,80153
+COOL WATER,caballero," $930.00 ",1,125,EDT,Amaderada,80153
 D BY DIESEL,caballero," $1814.00 ",2,100,EDT,Amaderada,LD552800
 DIESEL ONLY THE BRAVE,caballero," $1170.00 ",2,125,EDT,Amaderada,6164420
 DIOR HOMME INTENSE,caballero," $3712.00 ",1,100,EDP,Amaderada,F047924709
 DOLCE & GABBANA,caballero," $2519.00 ",1,100,EDP,Amaderada,7895214
 DOLCE & GABBANA LIGHT BLUE,caballero," $2015.00 ",1,125,EDT,Acuatica,1G95150000
-SCUDERIA FERRARI BLACK,caballero, $744.00 ,1,125,EDT,Amaderada,4604
+SCUDERIA FERRARI BLACK,caballero," $744.00 ",1,125,EDT,Amaderada,4604
 FERRIONI UOMO,caballero," $1008.00 ",2,100,EDT,Amaderada,132M003034
-FERRIONI DEEP BLUE,caballero, $946.00 ,1,100,EDT,Acuatica,29112
+FERRIONI DEEP BLUE,caballero," $946.00 ",1,100,EDT,Acuatica,29112
 SET FERRIONI OOH BOY! NEON VIBES 3PZS,caballero," $1077.00 ",1,100,EDT,Amaderada,2034404
-NEON VIBES# OohBoy!,caballero, $791.00 ,2,100,EDT,Amaderada,1320031034
-NEON VIBES #HeyDude!,caballero, $791.00 ,2,100,EDT,Amaderada,1320032034
+NEON VIBES# OohBoy!,caballero," $791.00 ",2,100,EDT,Amaderada,1320031034
+NEON VIBES #HeyDude!,caballero," $791.00 ",2,100,EDT,Amaderada,1320032034
 SET ACQUA DI GIO 2PZS,caballero," $3023.00 ",2,100,EDT,Acuatica,LF020600
 ACQUA DI GIO,caballero," $3023.00 ",1,100,EDP,Acuatica,https://i5.walmartimages.com.mx/mg/gm/1p/images/product-images/img_large/00336037205887l.jpg
 GIVENCHY POUR HOMME BLUE LABEL,caballero," $2093.00 ",2,100,EDT,Acuatica,6789
@@ -69,16 +69,16 @@ GUCCI GUILTY POUR HOMME,caballero," $2434.00 ",1,90,EDT,Amaderada,81183790
 GUCCI GUILTY POUR HOMME,caballero," $3162.00 ",2,100,EDP,Amaderada,38212
 L'HOMME IDEAL,caballero," $2015.00 ",1,100,EDP,Amaderada,G030312
 VETIVER,caballero," $1728.00 ",1,100,EDT,Amaderada,G030486
-GUESS UOMO INTENSO EST 1981,caballero, $868.00 ,2,100,EDP,Amaderada,https://guessmx.vtexassets.com/arquivos/ids/668699-800-1067?v=638548517292800000&width=800&height=1067&aspect=true
-GUESS MEN,caballero, $806.00 ,1,75,EDT,Amaderada,71323277
-GUESS SEDUCTIVE HOMME NOIR MEN,caballero, $806.00 ,2,100,EDT,Amaderada,32037
-GUESS SEDUCTIVE HOMME BLUE,caballero, $806.00 ,1,100,EDT,Acuatica,8003GH00
-GUESS 1981 LOS ANGELES MEN ,caballero, $845.00 ,1,100,EDT,Amaderada,"https://m.media-amazon.com/images/I/719xyWPPMKL._AC_UF894,1000_QL80_.jpg"
-GUESS 1981 INDIGO MEN,caballero, $845.00 ,2,100,EDT,Amaderada,https://cdn11.bigcommerce.com/s-2vt02okold/images/stencil/1280x1280/products/3552/4203/HGUE1981I__48350.1731099901.jpg?c=1
-SET GUESS 1981 LOS ANGELES FOR MEN 3PZS,caballero, $992.00 ,1,100,EDT,Amaderada,33001
-SET GUESS MAN GOLD 3PZS,caballero, $992.00 ,1,75,EDT,Amaderada,https://http2.mlstatic.com/D_NQ_NP_739939-MLU72604135500_112023-O.webp
+GUESS UOMO INTENSO EST 1981,caballero," $868.00 ",2,100,EDP,Amaderada,https://guessmx.vtexassets.com/arquivos/ids/668699-800-1067?v=638548517292800000&width=800&height=1067&aspect=true
+GUESS MEN,caballero," $806.00 ",1,75,EDT,Amaderada,71323277
+GUESS SEDUCTIVE HOMME NOIR MEN,caballero," $806.00 ",2,100,EDT,Amaderada,32037
+GUESS SEDUCTIVE HOMME BLUE,caballero," $806.00 ",1,100,EDT,Acuatica,8003GH00
+GUESS 1981 LOS ANGELES MEN ,caballero," $845.00 ",1,100,EDT,Amaderada,"https://m.media-amazon.com/images/I/719xyWPPMKL._AC_UF894,1000_QL80_.jpg"
+GUESS 1981 INDIGO MEN,caballero," $845.00 ",2,100,EDT,Amaderada,https://cdn11.bigcommerce.com/s-2vt02okold/images/stencil/1280x1280/products/3552/4203/HGUE1981I__48350.1731099901.jpg?c=1
+SET GUESS 1981 LOS ANGELES FOR MEN 3PZS,caballero," $992.00 #,1,100,EDT,Amaderada,33001
+SET GUESS MAN GOLD 3PZS,caballero," $992.00 ",1,75,EDT,Amaderada,https://http2.mlstatic.com/D_NQ_NP_739939-MLU72604135500_112023-O.webp
 GUESS MAN GOLD 3PZAS,caballero, $893.00 ,1,75,EDT,Amaderada,https://i5.walmartimages.com/asr/e1cfac92-19cc-439a-b480-b490cfc46e2f.3139a78ed7ea2ffa6b87a449768bdc3b.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF
-DRAKKAR NOIR,caballero, $814.00 ,1,100,EDT,Amaderada,200943
+DRAKKAR NOIR,caballero," $814.00 ",1,100,EDT,Amaderada,200943
 BOSS BOTTLED,caballero," $1767.00 ",2,100,EDT,Amaderada,35110
 BOSS BOTTLED INFINITE,caballero," $1891.00 ",2,100,EDP,Amaderada,22089
 HUGO XY,caballero," $1643.00 ",2,100,EDT,Amaderada,81078847
@@ -92,16 +92,15 @@ SCANDAL LE PARFUM,caballero," $3085.00 ",1,100,EDP,Amaderada,65182477
 JEAN PAUL GAULTIER SCANDAL ABSOLU,caballero," $3371.00 ",1,100,PARFUM,Amaderada,65189839
 LACOSTE BOOSTER,caballero," $1542.00 ",1,125,EDT,Amaderada,LC010A01
 LACOSTE L 12. 12 BLANC,caballero," $1807.00 ",1,100,EDT,Amaderada,https://cdn2.jomashop.com/media/catalog/product/l/a/lacoste-mens-eau-de-lacoste-l1212-white-edt-spray-34-oz-fragrances-3386460149082.jpg
-LATTAFA ASAD BURBON,caballero," $1435.50 ",1,100,EDP,Amaderada,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJrVceRFs17k_zCEE5EHlcQsLiUqV3x2tu6Q&s
+LATTAFA ASAD BURBON,caballero," $1436.00 ",1,100,EDP,Amaderada,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJrVceRFs17k_zCEE5EHlcQsLiUqV3x2tu6Q&s
 MONT BLANC LEGEND SPIRIT,caballero," $1705.00 ",2,100,EDT,Amaderada,MB-0000027
 MONTBLANC LEGEND BLUE,caballero," $1814.00 ",1,100,EDP,Acuatica,1C7L027A01
 MONT BLANC LEGEND RED,caballero," $1814.00 ",2,100,EDP,Amaderada,https://cdn11.bigcommerce.com/s-2vt02okold/images/stencil/1280x1280/products/3495/3992/HMONBLR__67799.1731099902.jpg?c=1
 MONT BLANC LEGEND,caballero," $1705.00 ",1,100,EDT,Amaderada,MB-032681
-MOSCHINO TOY BOY,caballero," $1953.00 ",3,100,EDP,Amaderada,1260006W10
 MOSCHINO TOY BOY,caballero," $2539.00 ",2,100,EDP,Amaderada,https://resources.sanborns.com.mx/imagenes-sanborns-ii/1200/8011003845132.jpg
-NAUTICA BLUE,caballero, $457.00 ,3,100,EDT,Acuatica,508027
-NAUTICA CLASSIC,caballero, $457.00 ,1,100,EDT,Acuatica,4016
-NAUTICA VOYAGE SPORT,caballero, $519.00 ,3,100,EDT,Acuatica,5878
+NAUTICA BLUE,caballero," $457.00 ",3,100,EDT,Acuatica,508027
+NAUTICA CLASSIC,caballero," $457.00 ",1,100,EDT,Acuatica,4016
+NAUTICA VOYAGE SPORT,caballero," $519.00 ",3,100,EDT,Acuatica,5878
 ONE MILLION,caballero," $2813.00 ",2,100,EDT,Amaderada,https://tienda.aeromexico.com/media/catalog/product/cache/8f61e4cc3efa147dc0bb165c50c5b4f9/1/2/120179_..jpeg
 ONE MILLION PARFUM,caballero," $3240.00 ",1,100,EDP,Amaderada,65156001
 ONE MILLION ELIXIR INTENSE,caballero," $3379.00 ",1,100,EDP,Amaderada,65177273
@@ -120,27 +119,27 @@ SET RALPH'S CLUB 3PZS,caballero," $3410.00 ",1,100,EDP,Amaderada,TMX05091
 FERRAGAMO UOMO URBAN FEEL,caballero," $1000.00 ",1,100,EDT,Amaderada,24806
 FERRAGAMO UOMO CASUAL LIFE,caballero," $1000.00 ",1,100,EDT,Amaderada,PFER0325992
 FERRAGAMO UOMO,caballero," $2604.00 ",1,100,EDT,Amaderada,PFER0325543
-SALVATORE FERRAGAMO POUR HOMME,caballero, $930.00 ,2,100,EDT,Amaderada,43152
-FERRAGAMO FREE TIME,caballero, $884.00 ,1,100,EDT,Amaderada,37252
-F BY SALVATORE FERRAGAMO POUR HOMME,caballero, $930.00 ,2,100,EDT,Amaderada,54252
-FERRAGAMO BLACK,caballero, $930.00 ,1,100,EDT,Amaderada,59252
-SALVATORE FERRAGAMO POUR HOMME 3PZS,caballero, $915.00 ,1,100,EDT,Amaderada,43400
+SALVATORE FERRAGAMO POUR HOMME,caballero," $930.00 ",2,100,EDT,Amaderada,43152
+FERRAGAMO FREE TIME,caballero," $884.00 ",1,100,EDT,Amaderada,37252
+F BY SALVATORE FERRAGAMO POUR HOMME,caballero," $930.00 ",2,100,EDT,Amaderada,54252
+FERRAGAMO BLACK,caballero," $930.00 ",1,100,EDT,Amaderada,59252
+SALVATORE FERRAGAMO POUR HOMME 3PZS,caballero," $915.00 ",1,100,EDT,Amaderada,43400
 SALVATORE FERRAGAMO AMO,caballero," $1465.00 ",1,100,EDP,Amaderada,2576
 FERRAGAMO UOMO,caballero," $2344.00 ",1,100,EDT,Amaderada,https://cdn2.jomashop.com/media/catalog/product/u/o/uomo-salvatore-ferragamo-s-ferragamo-edt-spray-34-oz-100-ml-m-8052086371804.jpg
 VALENTINO UOMO,caballero," $3534.00 ",1,100,EDT,Amaderada,65065171
 VALENTINO UOMO GREEN STRAVAGANZA,caballero," $2930.00 ",1,100,EDP,Amaderada,https://arome.mx/cdn/shop/files/descarga_9.jpg?v=1725562344&width=600
 VERSACE POUR HOMME,caballero," $1969.00 ",3,100,EDT,Amaderada,7200010
-SWISS ARMY SPORT,caballero, $945.00 ,1,100,EDT,Fresco,V0000890
-ALTITUDE,caballero, $837.00 ,2,100,EDT,Amaderada,V0000892
+SWISS ARMY SPORT,caballero," $945.00 ",1,100,EDT,Fresco,V0000890
+ALTITUDE,caballero," $837.00 ",2,100,EDT,Amaderada,V0000892
 POLO 125ML,caballero," $1961.00 ",1,125,EDT,Amaderada,https://fimgs.net/mdimg/perfume/o.890.jpg
-ARMAF ODYSSEY WILD ONE GOLD EDITION,caballero, $848.73 ,1,100,EDP,Amaderada,https://fimgs.net/mdimg/perfume-thumbs/375x500.83137.jpg
-212 VIP BLACK MEN,caballero," $2219.67 ",1,100,EDP,Amaderada,https://lamarinamx.vtexassets.com/arquivos/ids/228876/8411061870518.jpg?v=638830226194370000
-CUBA ROYAL,caballero, $314 ,2,100,EDT,Amaderada,https://ss701.liverpool.com.mx/xl/1118245420.jpg
-CUBA WILD HEART,caballero, $290 ,2,100,EDT,Amaderada,https://fimgs.net/mdimg/perfume/o.19362.jpg
-CUBA WINNER,caballero, $314 ,2,100,EDT,Amaderada,https://m.media-amazon.com/images/I/71MJfTlt8eL.jpg
-LATTAFA BADE'E AL OUD FOR GLORY,caballero, $799.00 ,2,100,EDP,Amaderada,https://fimgs.net/mdimg/perfume-thumbs/375x500.64948.jpg
-LATTAFA MAHARJAN GOLD,caballero, $799.00 ,1,100,EDP,Amaderada,https://fimgs.net/mdimg/perfume-thumbs/375x500.82798.jpg
-NAUTICA VOYAGE,caballero, $518.00 ,2,100,EDT,Acuatica,https://fimgs.net/mdimg/perfume/o.913.jpg
-PERRY ELLIS 360° BLACK,caballero, $806.00 ,1,100,EDT,Amaderada,https://www.perfumecenter.com.mx/cdn/shop/products/844061000513_c95c58e0-a2bd-490f-ad09-60e527111628_800x.jpg?v=1602239432
+ARMAF ODYSSEY WILD ONE GOLD EDITION,caballero," $849.00 ",1,100,EDP,Amaderada,https://fimgs.net/mdimg/perfume-thumbs/375x500.83137.jpg
+212 VIP BLACK MEN,caballero," $2220.00 ",1,100,EDP,Amaderada,https://lamarinamx.vtexassets.com/arquivos/ids/228876/8411061870518.jpg?v=638830226194370000
+CUBA ROYAL,caballero," $314 ",2,100,EDT,Amaderada,https://ss701.liverpool.com.mx/xl/1118245420.jpg
+CUBA WILD HEART,caballero," $290 ",2,100,EDT,Amaderada,https://fimgs.net/mdimg/perfume/o.19362.jpg
+CUBA WINNER,caballero," $314 ",2,100,EDT,Amaderada,https://m.media-amazon.com/images/I/71MJfTlt8eL.jpg
+LATTAFA BADE'E AL OUD FOR GLORY,caballero," $799.00 ",2,100,EDP,Amaderada,https://fimgs.net/mdimg/perfume-thumbs/375x500.64948.jpg
+LATTAFA MAHARJAN GOLD,caballero," $799.00 ",1,100,EDP,Amaderada,https://fimgs.net/mdimg/perfume-thumbs/375x500.82798.jpg
+NAUTICA VOYAGE,caballero," $518.00 ",2,100,EDT,Acuatica,https://fimgs.net/mdimg/perfume/o.913.jpg
+PERRY ELLIS 360° BLACK,caballero," $806.00 ",1,100,EDT,Amaderada,https://www.perfumecenter.com.mx/cdn/shop/products/844061000513_c95c58e0-a2bd-490f-ad09-60e527111628_800x.jpg?v=1602239432
 SAUVAGE,caballero," $3,207 ",1,100,EDT,Amaderada,https://www.sephora.com.mx/on/demandware.static/-/Sites-masterCatalog_Sephora/es_MX/dw4f9ae0ec/images/hi-res/boletos/PAOLA%20MACEDO/DIOR/3348901605366_x1.jpg
-CUBA SHADOW,caballero, $302.02 ,1,100,EDT,Amaderada,https://fimgs.net/mdimg/perfume-thumbs/375x500.74420.jpg
+CUBA SHADOW,caballero," $302.00 ",1,100,EDT,Amaderada,https://fimgs.net/mdimg/perfume-thumbs/375x500.74420.jpg
