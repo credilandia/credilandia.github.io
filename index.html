@@ -54,6 +54,9 @@ fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/
 
         if(!nombre || !categoria) return;
 
+        // 🔥 limpiar comillas problemáticas en el nombre
+        let nombreSeguro = nombre.replace(/['"]/g, "");
+
         if(!imagen.startsWith('http')){
             imagen = `https://intranet.ufra.com.mx/img/products/catalog/${imagen}/${imagen}_1.jpg`;
         }
@@ -76,11 +79,11 @@ fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/
             <p>$${precio}</p>
             <p class="${estado}">${textoStock}</p>
 
-            <a href="https://wa.me/2293749393?text=Hola me interesa el perfume ${nombre}" target="_blank">
+            <a href="https://wa.me/2293749393?text=Hola me interesa el perfume ${encodeURIComponent(nombre)}" target="_blank">
                 <button>Comprar</button>
             </a>
 
-            <button onclick="cotizarCredito('${nombre}', ${precio})">
+            <button onclick="cotizarCredito('${nombreSeguro}', ${precio})">
                 💳 Cotizar a crédito
             </button>
 
