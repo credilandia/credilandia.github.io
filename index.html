@@ -16,19 +16,19 @@ function mostrar(cat, btn) {
 function cotizarCredito(nombre, precio) {
     let p = parseFloat(precio);
 
+    if(isNaN(p)) return;
+
     let q3 = ((p * 1.24) / 3).toFixed(2);
     let q6 = ((p * 1.24) / 6).toFixed(2);
     let q12 = ((p * 1.60) / 12).toFixed(2);
     let q18 = ((p * 2.08) / 18).toFixed(2);
 
-    alert(
-`💳 Cotización para: ${nombre}
+    alert(`💳 Cotización para: ${nombre}
 
 🔹 3 pagos de $${q3}
 🔹 6 pagos de $${q6}
 🔹 12 pagos de $${q12}
-🔹 18 pagos de $${q18}`
-    );
+🔹 18 pagos de $${q18}`);
 }
 
 fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/perfumes.csv')
@@ -38,6 +38,8 @@ fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/
     const filas = data.split('\n').slice(1);
 
     filas.forEach(fila => {
+
+        if(!fila.trim()) return;
 
         const datos = fila.split(',');
 
@@ -52,10 +54,7 @@ fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/
         let aroma = datos[6]?.trim();
         let imagen = datos[7]?.trim();
 
-        if(!nombre || !categoria) return;
-
-        // 🔥 limpiar comillas problemáticas en el nombre
-        let nombreSeguro = nombre.replace(/['"]/g, "");
+        if(!nombre || !categoria || !precio) return;
 
         if(!imagen.startsWith('http')){
             imagen = `https://intranet.ufra.com.mx/img/products/catalog/${imagen}/${imagen}_1.jpg`;
@@ -71,32 +70,38 @@ fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/
             estado = "poco";
         }
 
-        const producto = `
-        <div class="producto">
+        const div = document.createElement("div");
+        div.className = "producto";
+
+        div.innerHTML = `
             <img src="${imagen}">
             <h3>${nombre}</h3>
             <p class="subtitulo">${ml} ml • ${tipo} • ${aroma}</p>
             <p>$${precio}</p>
             <p class="${estado}">${textoStock}</p>
 
-            <a href="https://wa.me/2293749393?text=Hola me interesa el perfume ${encodeURIComponent(nombre)}" target="_blank">
+            <a href="https://wa.me/2293749393?text=${encodeURIComponent("Hola me interesa el perfume " + nombre)}" target="_blank">
                 <button>Comprar</button>
             </a>
 
-            <button onclick="cotizarCredito('${nombreSeguro}', ${precio})">
-                💳 Cotizar a crédito
-            </button>
-
-        </div>
+            <button class="btn-credito">💳 Cotizar a crédito</button>
         `;
+
+        // 💳 BOTÓN SEGURO
+        div.querySelector(".btn-credito").addEventListener("click", () => {
+            cotizarCredito(nombre, precio);
+        });
 
         const contenedor = document.getElementById(categoria);
 
         if(contenedor){
-            contenedor.innerHTML += producto;
+            contenedor.appendChild(div);
         }
 
     });
 
+})
+.catch(err => {
+    console.error("Error cargando CSV:", err);
 });
 </script>
