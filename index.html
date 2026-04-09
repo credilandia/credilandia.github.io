@@ -40,7 +40,6 @@ body {
     font-weight: bold;
 }
 
-/* 🔥 GRID ARREGLADO */
 .contenedor-productos {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -48,21 +47,18 @@ body {
     padding: 20px;
 }
 
-/* 🔥 TARJETAS ORDENADAS */
 .producto {
     background: white;
     padding: 15px;
     border-radius: 15px;
 }
 
-/* 🔥 IMÁGENES CONTROLADAS (CLAVE) */
 .producto img {
     width: 100%;
     height: 180px;
     object-fit: contain;
 }
 
-/* BOTONES */
 button {
     padding: 10px;
     background-color: #b48a5a;
@@ -73,7 +69,6 @@ button {
     margin-top: 5px;
 }
 
-/* MODAL */
 .modal {
     display: none;
     position: fixed;
@@ -98,7 +93,6 @@ button {
     font-weight: bold;
 }
 
-/* 📱 RESPONSIVE */
 @media (max-width: 900px) {
     .contenedor-productos {
         grid-template-columns: repeat(2, 1fr);
@@ -137,7 +131,6 @@ También contamos con crédito en tienda.
 <div id="unisex" class="contenedor-productos" style="display:none;"></div>
 <div id="ninos" class="contenedor-productos" style="display:none;"></div>
 
-<!-- MODAL -->
 <div id="modalCredito" class="modal">
     <div class="modal-contenido">
         <span class="cerrar" onclick="cerrarModal()">X</span>
@@ -148,7 +141,7 @@ También contamos con crédito en tienda.
 
 <script>
 
-function mostrar(cat, btn) {
+function mostrar(cat) {
     document.getElementById("caballero").style.display = "none";
     document.getElementById("dama").style.display = "none";
     document.getElementById("unisex").style.display = "none";
@@ -157,15 +150,15 @@ function mostrar(cat, btn) {
     document.getElementById(cat).style.display = "grid";
 }
 
-/* CRÉDITO */
+/* 🔥 CRÉDITO CON REDONDEO HACIA ARRIBA */
 function abrirCredito(precio){
 
     let p = parseFloat(precio);
 
-    let plan3 = ((p + (p * 0.24)) / 3).toFixed(2);
-    let plan6 = ((p + (p * 0.24)) / 6).toFixed(2);
-    let plan12 = ((p + (p * 0.60)) / 12).toFixed(2);
-    let plan18 = ((p + (p * 1.08)) / 18).toFixed(2);
+    let plan3 = Math.ceil((p + (p * 0.24)) / 3);
+    let plan6 = Math.ceil((p + (p * 0.24)) / 6);
+    let plan12 = Math.ceil((p + (p * 0.60)) / 12);
+    let plan18 = Math.ceil((p + (p * 1.08)) / 18);
 
     let planesHTML = `
     <p>3 pagos de $${plan3}</p>
