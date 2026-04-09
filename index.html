@@ -6,26 +6,7 @@
 
 <style>
 
-<script>
-function cotizarCredito(nombre, precio) {
-    let p = parseFloat(precio);
 
-    let q3 = ((p * 1.24) / 3).toFixed(2);
-    let q6 = ((p * 1.24) / 6).toFixed(2);
-    let q12 = ((p * 1.60) / 12).toFixed(2);
-    let q18 = ((p * 2.08) / 18).toFixed(2);
-
-    alert(
-`💳 Cotización para: ${nombre}
-
-🔹 3 quincenas: 3 pagos de $${q3}
-🔹 6 quincenas: 6 pagos de $${q6}
-🔹 12 quincenas: 12 pagos de $${q12}
-🔹 18 quincenas: 18 pagos de $${q18}`
-    );
-}
-</script>
-    
 body {
     margin: 0;
     font-family: Arial;
@@ -73,11 +54,7 @@ body {
 .categorias button.activo {
     background: #8b5e34;
 }
-    
-<button onclick="cotizarCredito('${producto.nombre}', ${producto.precio})">
-💳 Cotizar a crédito
-</button>
-    
+
 /* GRID */
 .contenedor-productos {
     display: grid;
