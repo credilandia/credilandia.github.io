@@ -51,6 +51,7 @@ body {
     background: white;
     padding: 15px;
     border-radius: 15px;
+    transition: 0.3s;
 }
 
 .producto img {
@@ -67,6 +68,12 @@ button {
     border-radius: 5px;
     cursor: pointer;
     margin-top: 5px;
+}
+
+/* 🔥 EFECTO ILUMINADO */
+.resaltado {
+    box-shadow: 0 0 15px gold;
+    transform: scale(1.05);
 }
 
 .modal {
@@ -120,10 +127,10 @@ También contamos con crédito en tienda.
 <h2>Catálogo</h2>
 
 <div class="categorias">
-    <button onclick="mostrar('caballero', this)">Caballero</button>
-    <button onclick="mostrar('dama', this)">Dama</button>
-    <button onclick="mostrar('unisex', this)">Unisex</button>
-    <button onclick="mostrar('ninos', this)">Niños</button>
+    <button onclick="mostrar('caballero')">Caballero</button>
+    <button onclick="mostrar('dama')">Dama</button>
+    <button onclick="mostrar('unisex')">Unisex</button>
+    <button onclick="mostrar('ninos')">Niños</button>
 </div>
 
 <div id="caballero" class="contenedor-productos"></div>
@@ -150,7 +157,7 @@ function mostrar(cat) {
     document.getElementById(cat).style.display = "grid";
 }
 
-/* 🔥 CRÉDITO CON REDONDEO HACIA ARRIBA */
+/* 🔥 CRÉDITO */
 function abrirCredito(precio){
 
     let p = parseFloat(precio);
@@ -160,20 +167,42 @@ function abrirCredito(precio){
     let plan12 = Math.ceil((p + (p * 0.60)) / 12);
     let plan18 = Math.ceil((p + (p * 1.08)) / 18);
 
-    let planesHTML = `
+    document.getElementById("planes").innerHTML = `
     <p>3 pagos de $${plan3}</p>
     <p>6 pagos de $${plan6}</p>
     <p>12 pagos de $${plan12}</p>
     <p>18 pagos de $${plan18}</p>
     `;
 
-    document.getElementById("planes").innerHTML = planesHTML;
     document.getElementById("modalCredito").style.display = "flex";
 }
 
 function cerrarModal(){
     document.getElementById("modalCredito").style.display = "none";
 }
+
+/* 🔥 SCROLL + RESALTAR */
+function resaltarProducto(id){
+    setTimeout(() => {
+        let el = document.getElementById(id);
+        if(el){
+            el.scrollIntoView({behavior: "smooth", block: "center"});
+            el.classList.add("resaltado");
+
+            setTimeout(() => {
+                el.classList.remove("resaltado");
+            }, 3000);
+        }
+    }, 500);
+}
+
+/* 🔥 DETECTA HASH AL ABRIR */
+window.onload = () => {
+    if(window.location.hash){
+        let id = decodeURIComponent(window.location.hash.replace("#",""));
+        resaltarProducto(id);
+    }
+};
 
 fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/perfumes.csv')
 .then(res => res.text())
@@ -198,6 +227,8 @@ fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/
 
         if(!nombre || !categoria) return;
 
+        let idProducto = nombre.replace(/\s+/g, "-");
+
         if(!imagen.startsWith('http')){
             imagen = `https://intranet.ufra.com.mx/img/products/catalog/${imagen}/${imagen}_1.jpg`;
         }
@@ -205,7 +236,7 @@ fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/
         let textoStock = stock === 0 ? "Agotado" : "Disponibles: " + stock;
 
         const producto = `
-        <div class="producto">
+        <div class="producto" id="${idProducto}">
             <img src="${imagen}">
             <h3>${nombre}</h3>
             <p>${ml} ml • ${tipo} • ${aroma}</p>
@@ -214,7 +245,7 @@ fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/
 
             <button onclick="abrirCredito(${precio})">A crédito</button>
 
-            <a href="https://wa.me/2293749393?text=Hola me interesa el perfume ${nombre}" target="_blank">
+            <a href="https://wa.me/2293749393?text=Hola quiero este perfume:%0A${nombre}%0ALink: https://credilandia.github.io/#${idProducto}" target="_blank">
                 <button>Comprar</button>
             </a>
         </div>
