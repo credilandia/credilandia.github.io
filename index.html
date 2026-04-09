@@ -17,7 +17,6 @@ body {
     width: 100%;
 }
 
-/* TEXTO DE PRESENTACIÓN */
 .descripcion {
     padding: 15px;
     font-size: 18px;
@@ -26,7 +25,6 @@ body {
     margin: auto;
 }
 
-/* BOTONES BONITOS */
 .categorias {
     margin: 20px;
 }
@@ -40,21 +38,8 @@ body {
     border-radius: 25px;
     cursor: pointer;
     font-weight: bold;
-    font-size: 16px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    transition: all 0.3s ease;
 }
 
-.categorias button:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 8px 18px rgba(0,0,0,0.25);
-}
-
-.categorias button.activo {
-    background: #8b5e34;
-}
-
-/* GRID */
 .contenedor-productos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -62,31 +47,11 @@ body {
     padding: 20px;
 }
 
-/* PRODUCTO */
 .producto {
     background: white;
     padding: 15px;
     border-radius: 15px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
 }
-
-.producto img {
-    width: 100%;
-}
-
-/* SUBTITULO */
-.subtitulo {
-    font-size: 14px;
-    color: #777;
-    margin-top: -5px;
-    margin-bottom: 10px;
-    font-style: italic;
-}
-
-/* STOCK */
-.disponible { color: green; }
-.poco { color: orange; }
-.agotado { color: red; }
 
 button {
     padding: 10px;
@@ -95,38 +60,32 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-}
-
-/* BOTÓN CRÉDITO */
-.credito {
-    background: linear-gradient(135deg, #2e7d32, #66bb6a);
     margin-top: 5px;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .contenedor-productos {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* FOOTER */
-.footer {
-    padding: 20px;
-    background: linear-gradient(135deg, #f8f6f3, #e8e2d9);
-    margin-top: 30px;
-    display: flex;
-    justify-content: space-between;
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
     align-items: center;
 }
 
-.footer a img {
-    width: 40px;
-    transition: transform 0.3s ease;
+.modal-contenido {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    width: 300px;
 }
 
-.footer a img:hover {
-    transform: scale(1.2);
+.cerrar {
+    float: right;
+    cursor: pointer;
+    font-weight: bold;
 }
 
 </style>
@@ -137,9 +96,9 @@ button {
 <img src="logo.jpg" class="banner">
 
 <div class="descripcion">
-Descubre perfumes originales de diseñador y fragancias árabes que combinan lujo, intensidad y personalidad única.
+Descubre perfumes originales de diseñador y fragancias árabes.
 
-Además, contamos con crédito en tienda para que estrenes tu fragancia favorita de forma fácil y accesible
+También contamos con crédito en tienda.
 </div>
 
 <h2>Catálogo</h2>
@@ -156,19 +115,17 @@ Además, contamos con crédito en tienda para que estrenes tu fragancia favorita
 <div id="unisex" class="contenedor-productos" style="display:none;"></div>
 <div id="ninos" class="contenedor-productos" style="display:none;"></div>
 
-<div class="footer">
-    <a href="https://maps.app.goo.gl/UzRPx3WhWyhUQ7C3A" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png">
-    </a>
-    <a href="https://www.instagram.com/credilandiaxl?igsh=MWwzYWc3M2JsbXNjbQ==" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
-    </a>
-    <a href="https://www.facebook.com/share/1bhKAZjdwc/" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
-    </a>
+<!-- MODAL -->
+<div id="modalCredito" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal()">X</span>
+        <h3>Plazos quincenales</h3>
+        <div id="planes"></div>
+    </div>
 </div>
 
 <script>
+
 function mostrar(cat, btn) {
     document.getElementById("caballero").style.display = "none";
     document.getElementById("dama").style.display = "none";
@@ -180,6 +137,31 @@ function mostrar(cat, btn) {
     let botones = document.querySelectorAll('.categorias button');
     botones.forEach(b => b.classList.remove('activo'));
     btn.classList.add('activo');
+}
+
+/* FUNCIÓN CRÉDITO CORRECTA */
+function abrirCredito(precio){
+
+    let p = parseFloat(precio);
+
+    let plan3 = ((p + (p * 0.24)) / 3).toFixed(2);
+    let plan6 = ((p + (p * 0.24)) / 6).toFixed(2);
+    let plan12 = ((p + (p * 0.60)) / 12).toFixed(2);
+    let plan18 = ((p + (p * 1.08)) / 18).toFixed(2);
+
+    let planesHTML = `
+    <p>3 pagos de $${plan3}</p>
+    <p>6 pagos de $${plan6}</p>
+    <p>12 pagos de $${plan12}</p>
+    <p>18 pagos de $${plan18}</p>
+    `;
+
+    document.getElementById("planes").innerHTML = planesHTML;
+    document.getElementById("modalCredito").style.display = "flex";
+}
+
+function cerrarModal(){
+    document.getElementById("modalCredito").style.display = "none";
 }
 
 fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/perfumes.csv')
@@ -223,16 +205,16 @@ fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/
         <div class="producto">
             <img src="${imagen}">
             <h3>${nombre}</h3>
-            <p class="subtitulo">${ml} ml • ${tipo} • ${aroma}</p>
+            <p>${ml} ml • ${tipo} • ${aroma}</p>
             <p>$${precio}</p>
             <p class="${estado}">${textoStock}</p>
 
+            <button onclick="abrirCredito(${precio})">
+                A crédito
+            </button>
+
             <a href="https://wa.me/2293749393?text=Hola me interesa el perfume ${nombre}" target="_blank">
                 <button>Comprar</button>
-            </a>
-
-            <a href="https://wa.me/2293749393?text=Hola quiero sacar a crédito el perfume ${nombre}" target="_blank">
-                <button class="credito">A crédito</button>
             </a>
 
         </div>
