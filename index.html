@@ -70,9 +70,8 @@ button {
     margin-top: 5px;
 }
 
-/* 🔥 EFECTO ILUMINADO */
 .resaltado {
-    box-shadow: 0 0 15px gold;
+    box-shadow: 0 0 20px gold;
     transform: scale(1.05);
 }
 
@@ -157,9 +156,7 @@ function mostrar(cat) {
     document.getElementById(cat).style.display = "grid";
 }
 
-/* 🔥 CRÉDITO */
 function abrirCredito(precio){
-
     let p = parseFloat(precio);
 
     let plan3 = Math.ceil((p + (p * 0.24)) / 3);
@@ -181,28 +178,18 @@ function cerrarModal(){
     document.getElementById("modalCredito").style.display = "none";
 }
 
-/* 🔥 SCROLL + RESALTAR */
+/* 🔥 RESALTAR */
 function resaltarProducto(id){
-    setTimeout(() => {
-        let el = document.getElementById(id);
-        if(el){
-            el.scrollIntoView({behavior: "smooth", block: "center"});
-            el.classList.add("resaltado");
+    let el = document.getElementById(id);
+    if(el){
+        el.scrollIntoView({behavior: "smooth", block: "center"});
+        el.classList.add("resaltado");
 
-            setTimeout(() => {
-                el.classList.remove("resaltado");
-            }, 3000);
-        }
-    }, 500);
-}
-
-/* 🔥 DETECTA HASH AL ABRIR */
-window.onload = () => {
-    if(window.location.hash){
-        let id = decodeURIComponent(window.location.hash.replace("#",""));
-        resaltarProducto(id);
+        setTimeout(() => {
+            el.classList.remove("resaltado");
+        }, 3000);
     }
-};
+}
 
 fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/perfumes.csv')
 .then(res => res.text())
@@ -227,7 +214,10 @@ fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/
 
         if(!nombre || !categoria) return;
 
-        let idProducto = nombre.replace(/\s+/g, "-");
+        let idProducto = nombre
+            .toLowerCase()
+            .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+            .replace(/\s+/g, "-");
 
         if(!imagen.startsWith('http')){
             imagen = `https://intranet.ufra.com.mx/img/products/catalog/${imagen}/${imagen}_1.jpg`;
@@ -259,7 +249,14 @@ fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/
 
     });
 
+    /* 🔥 AHORA SÍ FUNCIONA */
+    if(window.location.hash){
+        let id = decodeURIComponent(window.location.hash.replace("#",""));
+        resaltarProducto(id);
+    }
+
 });
+
 </script>
 
 </body>
