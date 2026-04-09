@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<title>Credilandia</title>
-
 <style>
 
 body {
@@ -40,19 +34,44 @@ body {
     font-weight: bold;
 }
 
+/* 🔥 GRID CORREGIDO */
 .contenedor-productos {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     padding: 20px;
 }
 
+/* 🔥 TARJETAS IGUALES */
 .producto {
     background: white;
     padding: 15px;
     border-radius: 15px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
+/* 🔥 IMÁGENES ORDENADAS */
+.producto img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+/* TEXTO MÁS LIMPIO */
+.producto h3 {
+    font-size: 14px;
+    min-height: 40px;
+}
+
+.producto p {
+    font-size: 13px;
+}
+
+/* BOTONES */
 button {
     padding: 10px;
     background-color: #b48a5a;
@@ -88,148 +107,17 @@ button {
     font-weight: bold;
 }
 
+/* 📱 RESPONSIVE */
+@media (max-width: 1024px) {
+    .contenedor-productos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .contenedor-productos {
+        grid-template-columns: 1fr;
+    }
+}
+
 </style>
-</head>
-
-<body>
-
-<img src="logo.jpg" class="banner">
-
-<div class="descripcion">
-Descubre perfumes originales de diseñador y fragancias árabes.
-
-También contamos con crédito en tienda.
-</div>
-
-<h2>Catálogo</h2>
-
-<div class="categorias">
-    <button onclick="mostrar('caballero', this)">Caballero</button>
-    <button onclick="mostrar('dama', this)">Dama</button>
-    <button onclick="mostrar('unisex', this)">Unisex</button>
-    <button onclick="mostrar('ninos', this)">Niños</button>
-</div>
-
-<div id="caballero" class="contenedor-productos"></div>
-<div id="dama" class="contenedor-productos" style="display:none;"></div>
-<div id="unisex" class="contenedor-productos" style="display:none;"></div>
-<div id="ninos" class="contenedor-productos" style="display:none;"></div>
-
-<!-- MODAL -->
-<div id="modalCredito" class="modal">
-    <div class="modal-contenido">
-        <span class="cerrar" onclick="cerrarModal()">X</span>
-        <h3>Plazos quincenales</h3>
-        <div id="planes"></div>
-    </div>
-</div>
-
-<script>
-
-function mostrar(cat, btn) {
-    document.getElementById("caballero").style.display = "none";
-    document.getElementById("dama").style.display = "none";
-    document.getElementById("unisex").style.display = "none";
-    document.getElementById("ninos").style.display = "none";
-
-    document.getElementById(cat).style.display = "grid";
-
-    let botones = document.querySelectorAll('.categorias button');
-    botones.forEach(b => b.classList.remove('activo'));
-    btn.classList.add('activo');
-}
-
-/* FUNCIÓN CRÉDITO CORRECTA */
-function abrirCredito(precio){
-
-    let p = parseFloat(precio);
-
-    let plan3 = ((p + (p * 0.24)) / 3).toFixed(2);
-    let plan6 = ((p + (p * 0.24)) / 6).toFixed(2);
-    let plan12 = ((p + (p * 0.60)) / 12).toFixed(2);
-    let plan18 = ((p + (p * 1.08)) / 18).toFixed(2);
-
-    let planesHTML = `
-    <p>3 pagos de $${plan3}</p>
-    <p>6 pagos de $${plan6}</p>
-    <p>12 pagos de $${plan12}</p>
-    <p>18 pagos de $${plan18}</p>
-    `;
-
-    document.getElementById("planes").innerHTML = planesHTML;
-    document.getElementById("modalCredito").style.display = "flex";
-}
-
-function cerrarModal(){
-    document.getElementById("modalCredito").style.display = "none";
-}
-
-fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/perfumes.csv')
-.then(res => res.text())
-.then(data => {
-
-    const filas = data.split('\n').slice(1);
-
-    filas.forEach(fila => {
-
-        const datos = fila.split(',');
-
-        if(datos.length < 8) return;
-
-        let nombre = datos[0]?.trim();
-        let categoria = datos[1]?.trim().toLowerCase();
-        let precio = datos[2]?.replace(/["$ ]/g, '');
-        let stock = parseInt(datos[3]);
-        let ml = datos[4]?.trim();
-        let tipo = datos[5]?.trim();
-        let aroma = datos[6]?.trim();
-        let imagen = datos[7]?.trim();
-
-        if(!nombre || !categoria) return;
-
-        if(!imagen.startsWith('http')){
-            imagen = `https://intranet.ufra.com.mx/img/products/catalog/${imagen}/${imagen}_1.jpg`;
-        }
-
-        let estado = "disponible";
-        let textoStock = "Disponibles: " + stock;
-
-        if(stock === 0){
-            estado = "agotado";
-            textoStock = "Agotado";
-        } else if(stock === 1){
-            estado = "poco";
-        }
-
-        const producto = `
-        <div class="producto">
-            <img src="${imagen}">
-            <h3>${nombre}</h3>
-            <p>${ml} ml • ${tipo} • ${aroma}</p>
-            <p>$${precio}</p>
-            <p class="${estado}">${textoStock}</p>
-
-            <button onclick="abrirCredito(${precio})">
-                A crédito
-            </button>
-
-            <a href="https://wa.me/2293749393?text=Hola me interesa el perfume ${nombre}" target="_blank">
-                <button>Comprar</button>
-            </a>
-
-        </div>
-        `;
-
-        const contenedor = document.getElementById(categoria);
-
-        if(contenedor){
-            contenedor.innerHTML += producto;
-        }
-
-    });
-
-});
-</script>
-
-</body>
-</html>
