@@ -70,9 +70,17 @@ button {
     margin-top: 5px;
 }
 
+/* 🔥 NUEVO EFECTO (MUCHO MÁS VISIBLE) */
 .resaltado {
-    box-shadow: 0 0 20px gold;
-    transform: scale(1.05);
+    outline: 4px solid #d4af37;
+    transform: scale(1.08);
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 5px #d4af37; }
+    50% { box-shadow: 0 0 25px #d4af37; }
+    100% { box-shadow: 0 0 5px #d4af37; }
 }
 
 .modal {
@@ -178,7 +186,16 @@ function cerrarModal(){
     document.getElementById("modalCredito").style.display = "none";
 }
 
-/* 🔥 RESALTAR + CAMBIO DE CATEGORÍA */
+/* 🔥 LIMPIAR ID (SOLUCIONA ABERCROMBIE Y TODOS) */
+function limpiarID(texto){
+    return texto
+        .toLowerCase()
+        .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+        .replace(/[^a-z0-9]/g, "-")
+        .replace(/-+/g, "-");
+}
+
+/* 🔥 RESALTAR BIEN */
 function resaltarProducto(id){
     let el = document.getElementById(id);
 
@@ -190,13 +207,15 @@ function resaltarProducto(id){
         }
 
         setTimeout(() => {
+
             el.scrollIntoView({behavior: "smooth", block: "center"});
             el.classList.add("resaltado");
 
             setTimeout(() => {
                 el.classList.remove("resaltado");
-            }, 3000);
-        }, 300);
+            }, 4000);
+
+        }, 500);
     }
 }
 
@@ -223,11 +242,7 @@ fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/
 
         if(!nombre || !categoria) return;
 
-        let idProducto = nombre
-            .toLowerCase()
-            .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-            .replace(/[^a-z0-9]/g, "-")
-            .replace(/-+/g, "-");
+        let idProducto = limpiarID(nombre);
 
         if(!imagen.startsWith('http')){
             imagen = `https://intranet.ufra.com.mx/img/products/catalog/${imagen}/${imagen}_1.jpg`;
