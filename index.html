@@ -12,13 +12,9 @@ function mostrar(cat, btn) {
     btn.classList.add('activo');
 }
 
+/* 💳 FUNCIÓN DE CRÉDITO */
 function cotizarCredito(nombre, precio) {
     let p = parseFloat(precio);
-
-    if(isNaN(p)) {
-        alert("Error en el precio");
-        return;
-    }
 
     let q3 = ((p * 1.24) / 3).toFixed(2);
     let q6 = ((p * 1.24) / 6).toFixed(2);
@@ -26,52 +22,11 @@ function cotizarCredito(nombre, precio) {
     let q18 = ((p * 2.08) / 18).toFixed(2);
 
     alert(
-        "💳 Cotización para: " + nombre + "\n\n" +
-        "3 pagos de $" + q3 + "\n" +
-        "6 pagos de $" + q6 + "\n" +
-        "12 pagos de $" + q12 + "\n" +
-        "18 pagos de $" + q18
+`💳 Cotización para: ${nombre}
+
+🔹 3 pagos de $${q3}
+🔹 6 pagos de $${q6}
+🔹 12 pagos de $${q12}
+🔹 18 pagos de $${q18}`
     );
 }
-
-fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/perfumes.csv')
-.then(res => res.text())
-.then(data => {
-
-    const filas = data.split('\n');
-
-    for(let i = 1; i < filas.length; i++){
-
-        let fila = filas[i].trim();
-        if(!fila) continue;
-
-        const datos = fila.split(',');
-
-        if(datos.length < 8) continue;
-
-        let nombre = datos[0].trim();
-        let categoria = datos[1].trim().toLowerCase();
-        let precio = datos[2].replace(/["$ ]/g, '');
-        let stock = parseInt(datos[3]);
-
-        if(!nombre || !categoria || !precio) continue;
-
-        const contenedor = document.getElementById(categoria);
-        if(!contenedor) continue;
-
-        let div = document.createElement("div");
-        div.className = "producto";
-
-        div.innerHTML = `
-            <h3>${nombre}</h3>
-            <p>$${precio}</p>
-            <p>Stock: ${stock}</p>
-            <button onclick="cotizarCredito('${nombre}', ${precio})">💳 Crédito</button>
-        `;
-
-        contenedor.appendChild(div);
-    }
-
-})
-.catch(err => console.log(err));
-</script>
