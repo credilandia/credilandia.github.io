@@ -178,16 +178,25 @@ function cerrarModal(){
     document.getElementById("modalCredito").style.display = "none";
 }
 
-/* 🔥 RESALTAR */
+/* 🔥 RESALTAR + CAMBIO DE CATEGORÍA */
 function resaltarProducto(id){
     let el = document.getElementById(id);
+
     if(el){
-        el.scrollIntoView({behavior: "smooth", block: "center"});
-        el.classList.add("resaltado");
+        let categoria = el.getAttribute("data-cat");
+
+        if(categoria){
+            mostrar(categoria);
+        }
 
         setTimeout(() => {
-            el.classList.remove("resaltado");
-        }, 3000);
+            el.scrollIntoView({behavior: "smooth", block: "center"});
+            el.classList.add("resaltado");
+
+            setTimeout(() => {
+                el.classList.remove("resaltado");
+            }, 3000);
+        }, 300);
     }
 }
 
@@ -217,7 +226,8 @@ fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/
         let idProducto = nombre
             .toLowerCase()
             .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-            .replace(/\s+/g, "-");
+            .replace(/[^a-z0-9]/g, "-")
+            .replace(/-+/g, "-");
 
         if(!imagen.startsWith('http')){
             imagen = `https://intranet.ufra.com.mx/img/products/catalog/${imagen}/${imagen}_1.jpg`;
@@ -226,7 +236,7 @@ fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/
         let textoStock = stock === 0 ? "Agotado" : "Disponibles: " + stock;
 
         const producto = `
-        <div class="producto" id="${idProducto}">
+        <div class="producto" id="${idProducto}" data-cat="${categoria}">
             <img src="${imagen}">
             <h3>${nombre}</h3>
             <p>${ml} ml • ${tipo} • ${aroma}</p>
@@ -249,7 +259,6 @@ fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/
 
     });
 
-    /* 🔥 AHORA SÍ FUNCIONA */
     if(window.location.hash){
         let id = decodeURIComponent(window.location.hash.replace("#",""));
         resaltarProducto(id);
