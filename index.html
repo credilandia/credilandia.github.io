@@ -6,7 +6,6 @@
 
 <style>
 
-
 body {
     margin: 0;
     font-family: Arial;
@@ -98,6 +97,12 @@ button {
     cursor: pointer;
 }
 
+/* BOTÓN CRÉDITO */
+.credito {
+    background: linear-gradient(135deg, #2e7d32, #66bb6a);
+    margin-top: 5px;
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
     .contenedor-productos {
@@ -146,13 +151,11 @@ Además, contamos con crédito en tienda para que estrenes tu fragancia favorita
     <button onclick="mostrar('ninos', this)">Niños</button>
 </div>
 
-<!-- CONTENEDORES VACÍOS (se llenan solos) -->
 <div id="caballero" class="contenedor-productos"></div>
 <div id="dama" class="contenedor-productos" style="display:none;"></div>
 <div id="unisex" class="contenedor-productos" style="display:none;"></div>
 <div id="ninos" class="contenedor-productos" style="display:none;"></div>
 
-<!-- FOOTER -->
 <div class="footer">
     <a href="https://maps.app.goo.gl/UzRPx3WhWyhUQ7C3A" target="_blank">
         <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png">
@@ -165,7 +168,7 @@ Además, contamos con crédito en tienda para que estrenes tu fragancia favorita
     </a>
 </div>
 
-    <script>
+<script>
 function mostrar(cat, btn) {
     document.getElementById("caballero").style.display = "none";
     document.getElementById("dama").style.display = "none";
@@ -223,9 +226,15 @@ fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/
             <p class="subtitulo">${ml} ml • ${tipo} • ${aroma}</p>
             <p>$${precio}</p>
             <p class="${estado}">${textoStock}</p>
+
             <a href="https://wa.me/2293749393?text=Hola me interesa el perfume ${nombre}" target="_blank">
                 <button>Comprar</button>
             </a>
+
+            <a href="https://wa.me/2293749393?text=Hola quiero sacar a crédito el perfume ${nombre}" target="_blank">
+                <button class="credito">A crédito</button>
+            </a>
+
         </div>
         `;
 
@@ -239,6 +248,6 @@ fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/
 
 });
 </script>
-    
+
 </body>
 </html>
