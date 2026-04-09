@@ -70,17 +70,11 @@ button {
     margin-top: 5px;
 }
 
-/* 🔥 NUEVO EFECTO (MUCHO MÁS VISIBLE) */
+/* 🔥 EFECTO FUERTE Y VISIBLE */
 .resaltado {
-    outline: 4px solid #d4af37;
-    transform: scale(1.08);
-    animation: pulse 1s infinite;
-}
-
-@keyframes pulse {
-    0% { box-shadow: 0 0 5px #d4af37; }
-    50% { box-shadow: 0 0 25px #d4af37; }
-    100% { box-shadow: 0 0 5px #d4af37; }
+    outline: 5px solid red;
+    transform: scale(1.1);
+    transition: 0.3s;
 }
 
 .modal {
@@ -186,7 +180,7 @@ function cerrarModal(){
     document.getElementById("modalCredito").style.display = "none";
 }
 
-/* 🔥 LIMPIAR ID (SOLUCIONA ABERCROMBIE Y TODOS) */
+/* 🔥 LIMPIAR ID */
 function limpiarID(texto){
     return texto
         .toLowerCase()
@@ -195,28 +189,27 @@ function limpiarID(texto){
         .replace(/-+/g, "-");
 }
 
-/* 🔥 RESALTAR BIEN */
+/* 🔥 RESALTAR SEGURO */
 function resaltarProducto(id){
     let el = document.getElementById(id);
 
-    if(el){
-        let categoria = el.getAttribute("data-cat");
+    if(!el) return;
 
-        if(categoria){
-            mostrar(categoria);
-        }
+    let categoria = el.getAttribute("data-cat");
+
+    if(categoria){
+        mostrar(categoria);
+    }
+
+    setTimeout(() => {
+        el.scrollIntoView({behavior: "smooth", block: "center"});
+        el.classList.add("resaltado");
 
         setTimeout(() => {
+            el.classList.remove("resaltado");
+        }, 4000);
 
-            el.scrollIntoView({behavior: "smooth", block: "center"});
-            el.classList.add("resaltado");
-
-            setTimeout(() => {
-                el.classList.remove("resaltado");
-            }, 4000);
-
-        }, 500);
-    }
+    }, 800);
 }
 
 fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/perfumes.csv')
@@ -250,6 +243,12 @@ fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/
 
         let textoStock = stock === 0 ? "Agotado" : "Disponibles: " + stock;
 
+        let mensaje = encodeURIComponent(
+            "Hola quiero este perfume:\n" +
+            nombre +
+            "\nLink: https://credilandia.github.io/#" + idProducto
+        );
+
         const producto = `
         <div class="producto" id="${idProducto}" data-cat="${categoria}">
             <img src="${imagen}">
@@ -260,7 +259,7 @@ fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/
 
             <button onclick="abrirCredito(${precio})">A crédito</button>
 
-            <a href="https://wa.me/2293749393?text=Hola quiero este perfume:%0A${nombre}%0ALink: https://credilandia.github.io/#${idProducto}" target="_blank">
+            <a href="https://wa.me/2293749393?text=${mensaje}" target="_blank">
                 <button>Comprar</button>
             </a>
         </div>
@@ -276,7 +275,10 @@ fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/
 
     if(window.location.hash){
         let id = decodeURIComponent(window.location.hash.replace("#",""));
-        resaltarProducto(id);
+
+        setTimeout(() => {
+            resaltarProducto(id);
+        }, 1200);
     }
 
 });
