@@ -12,96 +12,66 @@ function mostrar(cat, btn) {
     btn.classList.add('activo');
 }
 
-/* 💳 FUNCIÓN DE CRÉDITO */
 function cotizarCredito(nombre, precio) {
     let p = parseFloat(precio);
 
-    if(isNaN(p)) return;
+    if(isNaN(p)) {
+        alert("Error en el precio");
+        return;
+    }
 
     let q3 = ((p * 1.24) / 3).toFixed(2);
     let q6 = ((p * 1.24) / 6).toFixed(2);
     let q12 = ((p * 1.60) / 12).toFixed(2);
     let q18 = ((p * 2.08) / 18).toFixed(2);
 
-    alert(`💳 Cotización para: ${nombre}
-
-🔹 3 pagos de $${q3}
-🔹 6 pagos de $${q6}
-🔹 12 pagos de $${q12}
-🔹 18 pagos de $${q18}`);
+    alert(
+        "💳 Cotización para: " + nombre + "\n\n" +
+        "3 pagos de $" + q3 + "\n" +
+        "6 pagos de $" + q6 + "\n" +
+        "12 pagos de $" + q12 + "\n" +
+        "18 pagos de $" + q18
+    );
 }
 
 fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/perfumes.csv')
 .then(res => res.text())
 .then(data => {
 
-    const filas = data.split('\n').slice(1);
+    const filas = data.split('\n');
 
-    filas.forEach(fila => {
+    for(let i = 1; i < filas.length; i++){
 
-        if(!fila.trim()) return;
+        let fila = filas[i].trim();
+        if(!fila) continue;
 
         const datos = fila.split(',');
 
-        if(datos.length < 8) return;
+        if(datos.length < 8) continue;
 
-        let nombre = datos[0]?.trim();
-        let categoria = datos[1]?.trim().toLowerCase();
-        let precio = datos[2]?.replace(/["$ ]/g, '');
+        let nombre = datos[0].trim();
+        let categoria = datos[1].trim().toLowerCase();
+        let precio = datos[2].replace(/["$ ]/g, '');
         let stock = parseInt(datos[3]);
-        let ml = datos[4]?.trim();
-        let tipo = datos[5]?.trim();
-        let aroma = datos[6]?.trim();
-        let imagen = datos[7]?.trim();
 
-        if(!nombre || !categoria || !precio) return;
+        if(!nombre || !categoria || !precio) continue;
 
-        if(!imagen.startsWith('http')){
-            imagen = `https://intranet.ufra.com.mx/img/products/catalog/${imagen}/${imagen}_1.jpg`;
-        }
+        const contenedor = document.getElementById(categoria);
+        if(!contenedor) continue;
 
-        let estado = "disponible";
-        let textoStock = "Disponibles: " + stock;
-
-        if(stock === 0){
-            estado = "agotado";
-            textoStock = "Agotado";
-        } else if(stock === 1){
-            estado = "poco";
-        }
-
-        const div = document.createElement("div");
+        let div = document.createElement("div");
         div.className = "producto";
 
         div.innerHTML = `
-            <img src="${imagen}">
             <h3>${nombre}</h3>
-            <p class="subtitulo">${ml} ml • ${tipo} • ${aroma}</p>
             <p>$${precio}</p>
-            <p class="${estado}">${textoStock}</p>
-
-            <a href="https://wa.me/2293749393?text=${encodeURIComponent("Hola me interesa el perfume " + nombre)}" target="_blank">
-                <button>Comprar</button>
-            </a>
-
-            <button class="btn-credito">💳 Cotizar a crédito</button>
+            <p>Stock: ${stock}</p>
+            <button onclick="cotizarCredito('${nombre}', ${precio})">💳 Crédito</button>
         `;
 
-        // 💳 BOTÓN SEGURO
-        div.querySelector(".btn-credito").addEventListener("click", () => {
-            cotizarCredito(nombre, precio);
-        });
-
-        const contenedor = document.getElementById(categoria);
-
-        if(contenedor){
-            contenedor.appendChild(div);
-        }
-
-    });
+        contenedor.appendChild(div);
+    }
 
 })
-.catch(err => {
-    console.error("Error cargando CSV:", err);
-});
+.catch(err => console.log(err));
 </script>
