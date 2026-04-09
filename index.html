@@ -1,171 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<title>Credilandia</title>
-
-<style>
-
-
-body {
-    margin: 0;
-    font-family: Arial;
-    background-color: #f8f6f3;
-    text-align: center;
-}
-
-.banner {
-    width: 100%;
-}
-
-/* TEXTO DE PRESENTACIÓN */
-.descripcion {
-    padding: 15px;
-    font-size: 18px;
-    color: #333;
-    max-width: 800px;
-    margin: auto;
-}
-
-/* BOTONES BONITOS */
-.categorias {
-    margin: 20px;
-}
-
-.categorias button {
-    margin: 10px;
-    padding: 15px 22px;
-    background: linear-gradient(135deg, #d4af37, #b48a5a);
-    color: white;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 16px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    transition: all 0.3s ease;
-}
-
-.categorias button:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 8px 18px rgba(0,0,0,0.25);
-}
-
-.categorias button.activo {
-    background: #8b5e34;
-}
-
-/* GRID */
-.contenedor-productos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px;
-}
-
-/* PRODUCTO */
-.producto {
-    background: white;
-    padding: 15px;
-    border-radius: 15px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-}
-
-.producto img {
-    width: 100%;
-}
-
-/* SUBTITULO */
-.subtitulo {
-    font-size: 14px;
-    color: #777;
-    margin-top: -5px;
-    margin-bottom: 10px;
-    font-style: italic;
-}
-
-/* STOCK */
-.disponible { color: green; }
-.poco { color: orange; }
-.agotado { color: red; }
-
-button {
-    padding: 10px;
-    background-color: #b48a5a;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .contenedor-productos {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* FOOTER */
-.footer {
-    padding: 20px;
-    background: linear-gradient(135deg, #f8f6f3, #e8e2d9);
-    margin-top: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer a img {
-    width: 40px;
-    transition: transform 0.3s ease;
-}
-
-.footer a img:hover {
-    transform: scale(1.2);
-}
-
-</style>
-</head>
-
-<body>
-
-<img src="logo.jpg" class="banner">
-
-<div class="descripcion">
-Descubre perfumes originales de diseñador y fragancias árabes que combinan lujo, intensidad y personalidad única.
-
-Además, contamos con crédito en tienda para que estrenes tu fragancia favorita de forma fácil y accesible
-</div>
-
-<h2>Catálogo</h2>
-
-<div class="categorias">
-    <button onclick="mostrar('caballero', this)">Caballero</button>
-    <button onclick="mostrar('dama', this)">Dama</button>
-    <button onclick="mostrar('unisex', this)">Unisex</button>
-    <button onclick="mostrar('ninos', this)">Niños</button>
-</div>
-
-<!-- CONTENEDORES VACÍOS (se llenan solos) -->
-<div id="caballero" class="contenedor-productos"></div>
-<div id="dama" class="contenedor-productos" style="display:none;"></div>
-<div id="unisex" class="contenedor-productos" style="display:none;"></div>
-<div id="ninos" class="contenedor-productos" style="display:none;"></div>
-
-<!-- FOOTER -->
-<div class="footer">
-    <a href="https://maps.app.goo.gl/UzRPx3WhWyhUQ7C3A" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png">
-    </a>
-    <a href="https://www.instagram.com/credilandiaxl?igsh=MWwzYWc3M2JsbXNjbQ==" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
-    </a>
-    <a href="https://www.facebook.com/share/1bhKAZjdwc/" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
-    </a>
-</div>
-
-    <script>
+<script>
 function mostrar(cat, btn) {
     document.getElementById("caballero").style.display = "none";
     document.getElementById("dama").style.display = "none";
@@ -177,6 +10,25 @@ function mostrar(cat, btn) {
     let botones = document.querySelectorAll('.categorias button');
     botones.forEach(b => b.classList.remove('activo'));
     btn.classList.add('activo');
+}
+
+/* 💳 FUNCIÓN DE CRÉDITO (AGREGADA) */
+function cotizarCredito(nombre, precio) {
+    let p = parseFloat(precio);
+
+    let q3 = ((p * 1.24) / 3).toFixed(2);
+    let q6 = ((p * 1.24) / 6).toFixed(2);
+    let q12 = ((p * 1.60) / 12).toFixed(2);
+    let q18 = ((p * 2.08) / 18).toFixed(2);
+
+    alert(
+`💳 Cotización para: ${nombre}
+
+🔹 3 pagos de $${q3}
+🔹 6 pagos de $${q6}
+🔹 12 pagos de $${q12}
+🔹 18 pagos de $${q18}`
+    );
 }
 
 fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/perfumes.csv')
@@ -223,9 +75,16 @@ fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/
             <p class="subtitulo">${ml} ml • ${tipo} • ${aroma}</p>
             <p>$${precio}</p>
             <p class="${estado}">${textoStock}</p>
+
             <a href="https://wa.me/2293749393?text=Hola me interesa el perfume ${nombre}" target="_blank">
                 <button>Comprar</button>
             </a>
+
+            <!-- 💳 BOTÓN AGREGADO -->
+            <button onclick="cotizarCredito('${nombre}', ${precio})">
+                💳 Cotizar a crédito
+            </button>
+
         </div>
         `;
 
@@ -239,6 +98,3 @@ fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/
 
 });
 </script>
-    
-</body>
-</html>
