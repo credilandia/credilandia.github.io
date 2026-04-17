@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -40,65 +40,40 @@ body {
     font-weight: bold;
 }
 
-/* CONTENEDOR (AQUI ESTA EL CAMBIO IMPORTANTE) */
+/* 🔥 CONTENEDOR MEJORADO */
 .contenedor-productos {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 25px;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 25px;
+    padding: 30px;
     max-width: 1200px;
     margin: auto;
 }
 
-/* MARCA */
-.marca {
-    text-align: left;
-}
-
-/* BOTON BONITO */
-.marca-titulo {
-    padding: 14px;
-    font-weight: bold;
-    color: white;
-    cursor: pointer;
-    border-radius: 12px;
-    background: linear-gradient(135deg, #c8a96a, #a67c52);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    transition: all 0.25s ease;
-    font-size: 15px;
-}
-
-.marca-titulo:hover {
-    transform: translateY(-2px);
-}
-
-/* CONTENIDO DESPLEGABLE */
-.marca-contenido {
-    max-height: 0;
-    overflow: hidden;
-    padding: 0;
-    transition: all 0.3s ease;
-}
-
-/* CUANDO ESTA ABIERTO */
-.marca-contenido.activo {
-    max-height: 2000px;
-    margin-top: 10px;
-}
-
-/* PRODUCTOS */
+/* 🔥 TARJETA MÁS PRO */
 .producto {
-    display: block;
-    margin-bottom: 12px;
     background: white;
-    padding: 12px;
-    border-radius: 12px;
+    padding: 15px;
+    border-radius: 18px;
+    transition: 0.3s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.producto:hover {
+    transform: translateY(-6px);
 }
 
 .producto img {
     width: 100%;
-    height: 140px;
+    height: 180px;
     object-fit: contain;
+}
+
+/* 🔥 EFECTO FUERTE Y VISIBLE */
+.resaltado {
+    outline: 5px solid red;
+    transform: scale(1.1);
+    transition: 0.3s;
 }
 
 button {
@@ -135,7 +110,6 @@ button {
     font-weight: bold;
 }
 
-/* RESPONSIVE */
 @media (max-width: 900px) {
     .contenedor-productos {
         grid-template-columns: repeat(2, 1fr);
@@ -190,12 +164,7 @@ function mostrar(cat) {
     document.getElementById("unisex").style.display = "none";
     document.getElementById("ninos").style.display = "none";
 
-    document.getElementById(cat).style.display = "block";
-}
-
-function toggleMarca(id){
-    let el = document.getElementById(id);
-    el.classList.toggle("activo");
+    document.getElementById(cat).style.display = "grid";
 }
 
 function abrirCredito(precio){
@@ -220,8 +189,36 @@ function cerrarModal(){
     document.getElementById("modalCredito").style.display = "none";
 }
 
+/* 🔥 LIMPIAR ID */
 function limpiarID(texto){
-    return texto.toLowerCase().replace(/[^a-z0-9]/g, "-");
+    return texto
+        .toLowerCase()
+        .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+        .replace(/[^a-z0-9]/g, "-")
+        .replace(/-+/g, "-");
+}
+
+/* 🔥 RESALTAR SEGURO */
+function resaltarProducto(id){
+    let el = document.getElementById(id);
+
+    if(!el) return;
+
+    let categoria = el.getAttribute("data-cat");
+
+    if(categoria){
+        mostrar(categoria);
+    }
+
+    setTimeout(() => {
+        el.scrollIntoView({behavior: "smooth", block: "center"});
+        el.classList.add("resaltado");
+
+        setTimeout(() => {
+            el.classList.remove("resaltado");
+        }, 4000);
+
+    }, 800);
 }
 
 fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/perfumes.csv')
@@ -230,67 +227,67 @@ fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/
 
     const filas = data.split('\n').slice(1);
 
-    let contenedores = {
-        caballero: {},
-        dama: {},
-        unisex: {},
-        ninos: {}
-    };
-
     filas.forEach(fila => {
 
         const datos = fila.split(',');
-        if(datos.length < 9) return;
 
-        let nombre = datos[0];
-        let categoria = datos[1].toLowerCase();
-        let precio = datos[2].replace(/[^0-9]/g,'');
-        let ml = datos[4];
-        let tipo = datos[5];
-        let aroma = datos[6];
-        let marca = datos[7];
-        let imagen = datos[8];
+        if(datos.length < 8) return;
 
-        if(!imagen || !imagen.startsWith('http')){
-            imagen = "https://via.placeholder.com/200";
+        let nombre = datos[0]?.trim();
+        let categoria = datos[1]?.trim().toLowerCase();
+        let precio = datos[2]?.replace(/["$ ]/g, '');
+        let stock = parseInt(datos[3]);
+        let ml = datos[4]?.trim();
+        let tipo = datos[5]?.trim();
+        let aroma = datos[6]?.trim();
+        let imagen = datos[7]?.trim();
+
+        if(!nombre || !categoria) return;
+
+        let idProducto = limpiarID(nombre);
+
+        if(!imagen.startsWith('http')){
+            imagen = `https://intranet.ufra.com.mx/img/products/catalog/${imagen}/${imagen}_1.jpg`;
         }
 
+        let textoStock = stock === 0 ? "Agotado" : "Disponibles: " + stock;
+
+        let mensaje = encodeURIComponent(
+            "Hola quiero este perfume:\n" +
+            nombre +
+            "\nLink: https://credilandia.github.io/#" + idProducto
+        );
+
         const producto = `
-        <div class="producto">
+        <div class="producto" id="${idProducto}" data-cat="${categoria}">
             <img src="${imagen}">
             <h3>${nombre}</h3>
             <p>${ml} ml • ${tipo} • ${aroma}</p>
             <p>$${precio}</p>
+            <p>${textoStock}</p>
+
             <button onclick="abrirCredito(${precio})">A crédito</button>
+
+            <a href="https://wa.me/2293749393?text=${mensaje}" target="_blank">
+                <button>Comprar</button>
+            </a>
         </div>
         `;
 
-        if(!contenedores[categoria][marca]){
-            contenedores[categoria][marca] = [];
-        }
+        const contenedor = document.getElementById(categoria);
 
-        contenedores[categoria][marca].push(producto);
+        if(contenedor){
+            contenedor.innerHTML += producto;
+        }
 
     });
 
-    for(let categoria in contenedores){
-        let contenedorHTML = document.getElementById(categoria);
+    if(window.location.hash){
+        let id = decodeURIComponent(window.location.hash.replace("#",""));
 
-        for(let marca in contenedores[categoria]){
-
-            let idMarca = limpiarID(marca);
-
-            contenedorHTML.innerHTML += `
-            <div class="marca">
-                <div class="marca-titulo" onclick="toggleMarca('${idMarca}')">
-                    ${marca}
-                </div>
-                <div class="marca-contenido" id="${idMarca}">
-                    ${contenedores[categoria][marca].join('')}
-                </div>
-            </div>
-            `;
-        }
+        setTimeout(() => {
+            resaltarProducto(id);
+        }, 1200);
     }
 
 });
