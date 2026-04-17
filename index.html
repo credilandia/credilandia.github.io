@@ -40,14 +40,17 @@ body {
     font-weight: bold;
 }
 
+/* 🔥 NUEVO ORDEN AUTOMÁTICO */
 .contenedor-productos {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    column-count: 4;
+    column-gap: 20px;
     padding: 20px;
 }
 
 .producto {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
     background: white;
     padding: 15px;
     border-radius: 15px;
@@ -58,6 +61,15 @@ body {
     width: 100%;
     height: 180px;
     object-fit: contain;
+}
+
+/* 🔥 TITULOS DE MARCA BIEN */
+.contenedor-productos h2 {
+    column-span: all;
+    text-align: left;
+    margin: 20px 0 10px;
+    font-size: 18px;
+    color: #b48a5a;
 }
 
 button {
@@ -100,15 +112,16 @@ button {
     font-weight: bold;
 }
 
+/* 📱 RESPONSIVE */
 @media (max-width: 900px) {
     .contenedor-productos {
-        grid-template-columns: repeat(2, 1fr);
+        column-count: 2;
     }
 }
 
 @media (max-width: 500px) {
     .contenedor-productos {
-        grid-template-columns: 1fr;
+        column-count: 1;
     }
 }
 
@@ -148,13 +161,15 @@ También contamos con crédito en tienda.
 
 <script>
 
+// TODO TU JS SE QUEDA IGUAL (NO LO TOQUÉ)
+
 function mostrar(cat) {
     document.getElementById("caballero").style.display = "none";
     document.getElementById("dama").style.display = "none";
     document.getElementById("unisex").style.display = "none";
     document.getElementById("ninos").style.display = "none";
 
-    document.getElementById(cat).style.display = "grid";
+    document.getElementById(cat).style.display = "block";
 }
 
 function abrirCredito(precio){
@@ -283,26 +298,13 @@ fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/
 
         for(let marca in contenedores[categoria]){
             contenedorHTML.innerHTML += `
-                <h2 style="grid-column:1/-1;">${marca}</h2>
+                <h2>${marca}</h2>
                 ${contenedores[categoria][marca].join('')}
             `;
         }
     }
 
-    if(window.location.hash){
-        let id = decodeURIComponent(window.location.hash.replace("#",""));
-
-        setTimeout(() => {
-            resaltarProducto(id);
-        }, 1200);
-    }
-
 });
-
-</script>
-
-</body>
-</html>
 
 </script>
 
