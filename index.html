@@ -40,11 +40,34 @@ body {
     font-weight: bold;
 }
 
-/* 🔥 NUEVO ORDEN AUTOMÁTICO */
+/* CONTENEDOR */
 .contenedor-productos {
+    padding: 20px;
+}
+
+/* MARCA DESPLEGABLE */
+.marca {
+    background: #fff;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: left;
+}
+
+.marca-titulo {
+    padding: 15px;
+    font-weight: bold;
+    background: #b48a5a;
+    color: white;
+    cursor: pointer;
+}
+
+/* PRODUCTOS */
+.marca-contenido {
+    display: none;
+    padding: 15px;
     column-count: 4;
     column-gap: 20px;
-    padding: 20px;
 }
 
 .producto {
@@ -54,22 +77,12 @@ body {
     background: white;
     padding: 15px;
     border-radius: 15px;
-    transition: 0.3s;
 }
 
 .producto img {
     width: 100%;
     height: 180px;
     object-fit: contain;
-}
-
-/* 🔥 TITULOS DE MARCA BIEN */
-.contenedor-productos h2 {
-    column-span: all;
-    text-align: left;
-    margin: 20px 0 10px;
-    font-size: 18px;
-    color: #b48a5a;
 }
 
 button {
@@ -80,12 +93,6 @@ button {
     border-radius: 5px;
     cursor: pointer;
     margin-top: 5px;
-}
-
-.resaltado {
-    outline: 5px solid red;
-    transform: scale(1.1);
-    transition: 0.3s;
 }
 
 .modal {
@@ -112,15 +119,15 @@ button {
     font-weight: bold;
 }
 
-/* 📱 RESPONSIVE */
+/* RESPONSIVE */
 @media (max-width: 900px) {
-    .contenedor-productos {
+    .marca-contenido {
         column-count: 2;
     }
 }
 
 @media (max-width: 500px) {
-    .contenedor-productos {
+    .marca-contenido {
         column-count: 1;
     }
 }
@@ -161,8 +168,6 @@ También contamos con crédito en tienda.
 
 <script>
 
-// TODO TU JS SE QUEDA IGUAL (NO LO TOQUÉ)
-
 function mostrar(cat) {
     document.getElementById("caballero").style.display = "none";
     document.getElementById("dama").style.display = "none";
@@ -170,6 +175,11 @@ function mostrar(cat) {
     document.getElementById("ninos").style.display = "none";
 
     document.getElementById(cat).style.display = "block";
+}
+
+function toggleMarca(id){
+    let el = document.getElementById(id);
+    el.style.display = el.style.display === "block" ? "none" : "block";
 }
 
 function abrirCredito(precio){
@@ -195,31 +205,7 @@ function cerrarModal(){
 }
 
 function limpiarID(texto){
-    return texto
-        .toLowerCase()
-        .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-        .replace(/[^a-z0-9]/g, "-")
-        .replace(/-+/g, "-");
-}
-
-function resaltarProducto(id){
-    let el = document.getElementById(id);
-    if(!el) return;
-
-    let categoria = el.getAttribute("data-cat");
-    if(categoria){
-        mostrar(categoria);
-    }
-
-    setTimeout(() => {
-        el.scrollIntoView({behavior: "smooth", block: "center"});
-        el.classList.add("resaltado");
-
-        setTimeout(() => {
-            el.classList.remove("resaltado");
-        }, 4000);
-
-    }, 800);
+    return texto.toLowerCase().replace(/[^a-z0-9]/g, "-");
 }
 
 fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/perfumes.csv')
@@ -238,50 +224,31 @@ fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/
     filas.forEach(fila => {
 
         const datos = fila.split(',');
-
         if(datos.length < 9) return;
 
-        let nombre = datos[0]?.trim();
-        let categoria = datos[1]?.trim().toLowerCase();
-        let precio = datos[2]?.replace(/["$ ]/g, '');
-        let stock = parseInt(datos[3]);
-        let ml = datos[4]?.trim();
-        let tipo = datos[5]?.trim();
-        let aroma = datos[6]?.trim();
-        let marca = datos[7]?.trim();
-        let imagen = datos[8]?.trim();
-
-        if(!nombre || !categoria || !marca) return;
+        let nombre = datos[0];
+        let categoria = datos[1].toLowerCase();
+        let precio = datos[2].replace(/[^0-9]/g,'');
+        let stock = datos[3];
+        let ml = datos[4];
+        let tipo = datos[5];
+        let aroma = datos[6];
+        let marca = datos[7];
+        let imagen = datos[8];
 
         let idProducto = limpiarID(nombre);
 
-        if(!imagen || imagen === ""){
-            imagen = "https://via.placeholder.com/200x200?text=Sin+imagen";
-        } else if(!imagen.startsWith('http')){
-            imagen = `https://intranet.ufra.com.mx/img/products/catalog/${imagen}/${imagen}_1.jpg`;
+        if(!imagen || !imagen.startsWith('http')){
+            imagen = "https://via.placeholder.com/200";
         }
 
-        let textoStock = stock === 0 ? "Agotado" : "Disponibles: " + stock;
-
-        let mensaje = encodeURIComponent(
-            "Hola quiero este perfume:\n" +
-            nombre +
-            "\nLink: https://credilandia.github.io/#" + idProducto
-        );
-
         const producto = `
-        <div class="producto" id="${idProducto}" data-cat="${categoria}">
+        <div class="producto">
             <img src="${imagen}">
             <h3>${nombre}</h3>
             <p>${ml} ml • ${tipo} • ${aroma}</p>
             <p>$${precio}</p>
-            <p>${textoStock}</p>
-
             <button onclick="abrirCredito(${precio})">A crédito</button>
-
-            <a href="https://wa.me/2293749393?text=${mensaje}" target="_blank">
-                <button>Comprar</button>
-            </a>
         </div>
         `;
 
@@ -297,9 +264,18 @@ fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/
         let contenedorHTML = document.getElementById(categoria);
 
         for(let marca in contenedores[categoria]){
+
+            let idMarca = limpiarID(marca);
+
             contenedorHTML.innerHTML += `
-                <h2>${marca}</h2>
-                ${contenedores[categoria][marca].join('')}
+            <div class="marca">
+                <div class="marca-titulo" onclick="toggleMarca('${idMarca}')">
+                    ${marca}
+                </div>
+                <div class="marca-contenido" id="${idMarca}">
+                    ${contenedores[categoria][marca].join('')}
+                </div>
+            </div>
             `;
         }
     }
