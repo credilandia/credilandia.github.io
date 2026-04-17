@@ -45,31 +45,48 @@ body {
     padding: 20px;
 }
 
-/* MARCA DESPLEGABLE */
+/* MARCA */
 .marca {
-    background: #fff;
     margin-bottom: 15px;
-    border-radius: 12px;
-    overflow: hidden;
     text-align: left;
 }
 
+/* BOTON BONITO */
 .marca-titulo {
-    padding: 15px;
+    padding: 16px;
     font-weight: bold;
-    background: #b48a5a;
     color: white;
     cursor: pointer;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #c8a96a, #a67c52);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.marca-titulo:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    background: linear-gradient(135deg, #d6b87a, #b88a5c);
+}
+
+/* CONTENIDO DESPLEGABLE */
+.marca-contenido {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 15px;
+    column-count: 4;
+    column-gap: 20px;
+    transition: all 0.4s ease;
+}
+
+/* CUANDO ESTA ABIERTO */
+.marca-contenido.activo {
+    max-height: 2000px;
+    padding: 15px;
 }
 
 /* PRODUCTOS */
-.marca-contenido {
-    display: none;
-    padding: 15px;
-    column-count: 4;
-    column-gap: 20px;
-}
-
 .producto {
     display: inline-block;
     width: 100%;
@@ -177,9 +194,10 @@ function mostrar(cat) {
     document.getElementById(cat).style.display = "block";
 }
 
+/* ANIMACION BONITA */
 function toggleMarca(id){
     let el = document.getElementById(id);
-    el.style.display = el.style.display === "block" ? "none" : "block";
+    el.classList.toggle("activo");
 }
 
 function abrirCredito(precio){
@@ -229,7 +247,6 @@ fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/
         let nombre = datos[0];
         let categoria = datos[1].toLowerCase();
         let precio = datos[2].replace(/[^0-9]/g,'');
-        let stock = datos[3];
         let ml = datos[4];
         let tipo = datos[5];
         let aroma = datos[6];
