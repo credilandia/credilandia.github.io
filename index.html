@@ -189,7 +189,6 @@ function cerrarModal(){
     document.getElementById("modalCredito").style.display = "none";
 }
 
-/* 🔥 LIMPIAR ID */
 function limpiarID(texto){
     return texto
         .toLowerCase()
@@ -198,17 +197,12 @@ function limpiarID(texto){
         .replace(/-+/g, "-");
 }
 
-/* 🔥 RESALTAR SEGURO */
 function resaltarProducto(id){
     let el = document.getElementById(id);
-
     if(!el) return;
 
     let categoria = el.getAttribute("data-cat");
-
-    if(categoria){
-        mostrar(categoria);
-    }
+    if(categoria){ mostrar(categoria); }
 
     setTimeout(() => {
         el.scrollIntoView({behavior: "smooth", block: "center"});
@@ -217,7 +211,6 @@ function resaltarProducto(id){
         setTimeout(() => {
             el.classList.remove("resaltado");
         }, 4000);
-
     }, 800);
 }
 
@@ -231,7 +224,8 @@ fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/
 
         const datos = fila.split(',');
 
-        if(datos.length < 8) return;
+        // 🔥 CORREGIDO AQUÍ
+        if(datos.length < 9) return;
 
         let nombre = datos[0]?.trim();
         let categoria = datos[1]?.trim().toLowerCase();
@@ -240,7 +234,8 @@ fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/
         let ml = datos[4]?.trim();
         let tipo = datos[5]?.trim();
         let aroma = datos[6]?.trim();
-        let imagen = datos[7]?.trim();
+        let marca = datos[7]?.trim(); // nueva columna
+        let imagen = datos[8]?.trim(); // posición correcta
 
         if(!nombre || !categoria) return;
 
@@ -284,10 +279,7 @@ fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/
 
     if(window.location.hash){
         let id = decodeURIComponent(window.location.hash.replace("#",""));
-
-        setTimeout(() => {
-            resaltarProducto(id);
-        }, 1200);
+        setTimeout(() => { resaltarProducto(id); }, 1200);
     }
 
 });
