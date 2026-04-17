@@ -69,7 +69,6 @@ body {
     object-fit: contain;
 }
 
-/* 🔥 EFECTO FUERTE Y VISIBLE */
 .resaltado {
     outline: 5px solid red;
     transform: scale(1.1);
@@ -133,6 +132,15 @@ button {
 Descubre perfumes originales de diseñador y fragancias árabes.
 También contamos con crédito en tienda.
 </div>
+
+<!-- 🔥 BUSCADOR (AGREGADO) -->
+<input 
+    type="text" 
+    id="buscador" 
+    placeholder="🔍 Buscar perfume o marca..." 
+    onkeyup="filtrarProductos()"
+    style="width:80%; max-width:400px; padding:12px; border-radius:20px; border:1px solid #ccc; margin:20px;"
+>
 
 <h2>Catálogo</h2>
 
@@ -214,6 +222,22 @@ function resaltarProducto(id){
     }, 800);
 }
 
+/* 🔥 FUNCIÓN BUSCADOR (AGREGADA) */
+function filtrarProductos(){
+    let input = document.getElementById("buscador").value.toLowerCase();
+    let productos = document.querySelectorAll(".producto");
+
+    productos.forEach(p => {
+        let texto = p.innerText.toLowerCase();
+
+        if(texto.includes(input)){
+            p.style.display = "block";
+        } else {
+            p.style.display = "none";
+        }
+    });
+}
+
 fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/perfumes.csv')
 .then(res => res.text())
 .then(data => {
@@ -224,7 +248,6 @@ fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/
 
         const datos = fila.split(',');
 
-        // 🔥 CORREGIDO AQUÍ
         if(datos.length < 9) return;
 
         let nombre = datos[0]?.trim();
@@ -234,8 +257,8 @@ fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/
         let ml = datos[4]?.trim();
         let tipo = datos[5]?.trim();
         let aroma = datos[6]?.trim();
-        let marca = datos[7]?.trim(); // nueva columna
-        let imagen = datos[8]?.trim(); // posición correcta
+        let marca = datos[7]?.trim();
+        let imagen = datos[8]?.trim();
 
         if(!nombre || !categoria) return;
 
