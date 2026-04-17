@@ -70,7 +70,6 @@ button {
     margin-top: 5px;
 }
 
-/* 🔥 EFECTO FUERTE Y VISIBLE */
 .resaltado {
     outline: 5px solid red;
     transform: scale(1.1);
@@ -180,7 +179,6 @@ function cerrarModal(){
     document.getElementById("modalCredito").style.display = "none";
 }
 
-/* 🔥 LIMPIAR ID */
 function limpiarID(texto){
     return texto
         .toLowerCase()
@@ -189,14 +187,11 @@ function limpiarID(texto){
         .replace(/-+/g, "-");
 }
 
-/* 🔥 RESALTAR SEGURO */
 function resaltarProducto(id){
     let el = document.getElementById(id);
-
     if(!el) return;
 
     let categoria = el.getAttribute("data-cat");
-
     if(categoria){
         mostrar(categoria);
     }
@@ -218,11 +213,18 @@ fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/
 
     const filas = data.split('\n').slice(1);
 
+    let contenedores = {
+        caballero: {},
+        dama: {},
+        unisex: {},
+        ninos: {}
+    };
+
     filas.forEach(fila => {
 
         const datos = fila.split(',');
 
-        if(datos.length < 8) return;
+        if(datos.length < 9) return;
 
         let nombre = datos[0]?.trim();
         let categoria = datos[1]?.trim().toLowerCase();
@@ -231,13 +233,16 @@ fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/
         let ml = datos[4]?.trim();
         let tipo = datos[5]?.trim();
         let aroma = datos[6]?.trim();
-        let imagen = datos[7]?.trim();
+        let marca = datos[7]?.trim();
+        let imagen = datos[8]?.trim();
 
-        if(!nombre || !categoria) return;
+        if(!nombre || !categoria || !marca) return;
 
         let idProducto = limpiarID(nombre);
 
-        if(!imagen.startsWith('http')){
+        if(!imagen || imagen === ""){
+            imagen = "https://via.placeholder.com/200x200?text=Sin+imagen";
+        } else if(!imagen.startsWith('http')){
             imagen = `https://intranet.ufra.com.mx/img/products/catalog/${imagen}/${imagen}_1.jpg`;
         }
 
@@ -265,13 +270,24 @@ fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/
         </div>
         `;
 
-        const contenedor = document.getElementById(categoria);
-
-        if(contenedor){
-            contenedor.innerHTML += producto;
+        if(!contenedores[categoria][marca]){
+            contenedores[categoria][marca] = [];
         }
 
+        contenedores[categoria][marca].push(producto);
+
     });
+
+    for(let categoria in contenedores){
+        let contenedorHTML = document.getElementById(categoria);
+
+        for(let marca in contenedores[categoria]){
+            contenedorHTML.innerHTML += `
+                <h2 style="grid-column:1/-1;">${marca}</h2>
+                ${contenedores[categoria][marca].join('')}
+            `;
+        }
+    }
 
     if(window.location.hash){
         let id = decodeURIComponent(window.location.hash.replace("#",""));
@@ -282,6 +298,11 @@ fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/
     }
 
 });
+
+</script>
+
+</body>
+</html>
 
 </script>
 
