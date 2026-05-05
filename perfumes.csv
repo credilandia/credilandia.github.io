@@ -49,7 +49,7 @@ BAD BOY EXTREME,caballero," $3100.00 ",1,100,EDP,Amaderada,CAROLINA HERRERA,6518
 CHIC FOR MEN,caballero," $2488.00 ",1,100,EDT,Amaderada,CAROLINA HERRERA,6001160
 CH MEN PASIÓN,caballero," $2705.00 ",1,100,EDP,Amaderada,CAROLINA HERRERA,65186839
 CH MEN,caballero," $2728.00 ",2,100,EDT,Amaderada,CAROLINA HERRERA,https://intranet.ufra.com.mx/img/products/catalog/06792/06792_1.jpg
-CK ONE,caballero," $1070.00 ",2,100,EDT,Amaderada,CALVIN KLEIN ,10740
+CK ONE,caballero," $1070.00 ",1,100,EDT,Amaderada,CALVIN KLEIN ,10740
 COOL WATER,caballero," $930.00 ",1,125,EDT,Marina,DAVIDOFF,https://intranet.ufra.com.mx/img/products/catalog/080153/080153_1.jpg
 D BY DIESEL,caballero," $1814.00 ",2,100,EDT,Amaderada,DIESEL,LD552800
 DIESEL ONLY THE BRAVE,caballero," $1170.00 ",1,125,EDT,Amaderada,DIESEL,6164420
@@ -98,9 +98,9 @@ MONTBLANC LEGEND BLUE,caballero," $1814.00 ",1,100,EDP,Acuatica,MONTBLANC,1C7L02
 MONT BLANC LEGEND RED,caballero," $1814.00 ",2,100,EDP,Amaderada,MONTBLANC,https://cdn11.bigcommerce.com/s-2vt02okold/images/stencil/1280x1280/products/3495/3992/HMONBLR__67799.1731099902.jpg?c=1
 MONT BLANC LEGEND,caballero," $1705.00 ",1,100,EDT,Amaderada,MONTBLANC,MB-032681
 MOSCHINO TOY BOY,caballero," $2539.00 ",5,100,EDP,Amaderada,MOSCHINO,https://resources.sanborns.com.mx/imagenes-sanborns-ii/1200/8011003845132.jpg
-NAUTICA BLUE,caballero," $457.00 ",3,100,EDT,Acuatica,NAUTICA,508027
+NAUTICA BLUE,caballero," $457.00 ",2,100,EDT,Acuatica,NAUTICA,508027
 NAUTICA CLASSIC,caballero," $457.00 ",1,100,EDT,Acuatica,NAUTICA,https://intranet.ufra.com.mx/img/products/catalog/04016/04016_1.jpg
-NAUTICA VOYAGE SPORT,caballero," $519.00 ",3,100,EDT,Acuatica,NAUTICA,5878
+NAUTICA VOYAGE SPORT,caballero," $519.00 ",2,100,EDT,Acuatica,NAUTICA,5878
 ONE MILLION,caballero," $2813.00 ",2,100,EDT,Amaderada,PACO RABANNE,https://beautyfreeshop.com.mx/cdn/shop/products/364.png?v=1616038822
 ONE MILLION PARFUM,caballero," $3240.00 ",1,100,EDP,Amaderada,PACO RABANNE,65156001
 ONE MILLION ELIXIR INTENSE,caballero," $3379.00 ",1,100,EDP,Amaderada,PACO RABANNE,65177273
@@ -137,7 +137,7 @@ CUBA ROYAL,caballero," $314 ",2,100,EDT,Amaderada,CUBA,https://ss701.liverpool.c
 CUBA WILD HEART,caballero," $290 ",2,100,EDT,Amaderada,CUBA,https://m.media-amazon.com/images/I/71qa5Ow-JwL.jpg
 CUBA WINNER,caballero," $314 ",2,100,EDT,Amaderada,CUBA,https://m.media-amazon.com/images/I/71MJfTlt8eL.jpg
 LATTAFA BADE'E AL OUD FOR GLORY,árabes," $799.00 ",2,100,EDP,Amaderada,LATTAFA,https://fimgs.net/mdimg/perfume-thumbs/375x500.64948.jpg
-LATTAFA MAHARJAN GOLD,árabes," $799.00 ",1,100,EDP,Amaderada,LATTAFA,https://m.media-amazon.com/images/I/61lWbNw4XLL._AC_UF350350_QL80_.jpg
+LATTAFA MAHARJAN GOLD,árabes," $799.00 ",0,100,EDP,Amaderada,LATTAFA,https://m.media-amazon.com/images/I/61lWbNw4XLL._AC_UF350350_QL80_.jpg
 NAUTICA VOYAGE,caballero," $518.00 ",0,100,EDT,Acuatica,NAUTICA,https://fimgs.net/mdimg/perfume/o.913.jpg
 PERRY ELLIS 360° BLACK,caballero," $806.00 ",1,100,EDT,Amaderada,PERRY ELLIS,https://www.perfumecenter.com.mx/cdn/shop/products/844061000513_c95c58e0-a2bd-490f-ad09-60e527111628_800x.jpg?v=1602239432
 SAUVAGE,caballero," $3207 ",0,100,EDP,Amaderada,DIOR,https://m.media-amazon.com/images/I/61kQSJ9uijL._AC_UF10001000_QL80_.jpg
@@ -243,7 +243,7 @@ LADY MILLION EMPIRE,dama,2682,1,80,EDP,Chipre Floral,PACO RABANNE,65144087
 OLYMPEA,dama,3185,1,80,EDP,Oriental,PACO RABANNE,65095775
 OLYMPEA FLORA,dama,3503,1,80,EDP,Floral,PACO RABANNE,65188725
 OLYMPEA PARFUM,dama,3658,1,80,PARFUM,Oriental Floral,PACO RABANNE,65199563
-FAME,dama,3488,3,80,EDP,Floral,PACO RABANNE,65170086
+FAME,dama,3488,2,80,EDP,Floral,PACO RABANNE,65170086
 PARIS HILTON GOLD RUSH,dama,1077,2,100,EDP,Floral Frutal,PARIS HILTON,https://fimgs.net/mdimg/perfume-thumbs/375x500.39568.jpg
 PARIS HILTON,dama,1077,1,100,EDP,Floral Frutal,PARIS HILTON,38271576
 SET PARIS HILTON PLATINUM RUSH,dama,1256,1,100,EDP,Floral Frutal,PARIS HILTON,2000400
@@ -276,7 +276,7 @@ BRITNEY SPEARS FANTASY,dama,675,1,100,EDP,Gourmand,BRITNEY SPEARS,https://encryp
 AMOR AMOR,dama,939,2,100,EDT,Floral Frutal,CACHAREL,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQF9sRp23y3Vy1_ycFtpgHfKiK4bx9h_oFtg&s
 DKNY BE DELICIOUS ORCHARD ST,dama,1504,1,100,EDP,Floral Frutal,DKNY,https://fimgs.net/mdimg/perfume-thumbs/dark-375x500.84253.avif
 SABRINA CARPENTER CARAMEL DREAM,dama,1500,1,75,EDP,Gourmand,SABRINA CARPENTER,https://fimgs.net/mdimg/perfume-thumbs/dark-375x500.84095.avif
-SABRINA CARPENTER CHERRY BABY,dama,1500,1,75,EDP,Frutal Gourmand,SABRINA CARPENTER,https://fimgs.net/mdimg/perfume-thumbs/dark-375x500.95861.avif	
+SABRINA CARPENTER CHERRY BABY,dama,1500,0,75,EDP,Frutal Gourmand,SABRINA CARPENTER,https://fimgs.net/mdimg/perfume-thumbs/dark-375x500.95861.avif	
 SET PERRY ELLIS 360° PURPLE 4PZS,dama,1060,1,100,EDP,Floral Amaderado,PERRY ELLIS,https://ss701.liverpool.com.mx/xl/1175419434.jpg	
 BHARARA QUEEN,árabes,1722,1,100,EDP,Floral,BHARARA,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLLMtdUMw-K5Ul0cKp9fpTJwLOtGwlHQN6Hw&s	
 GUESS GIRL,dama,711,1,100,EDT,Floral Frutal,GUESS,https://fimgs.net/mdimg/perfume-thumbs/dark-375x500.17012.avif	
@@ -291,8 +291,8 @@ TUBBES BERRY BLAST,ninos,446,1,50,EDP,Floral Frutal,GRANDEUR,https://encrypted-t
 TUBBES DREAMY TREATS,ninos,446,2,50,EDP,Oriental Vainilla,GRANDEUR,https://cdn.ecommercedns.uk/files/6/267466/7/54106447/9466f.jpg
 TUBBES PINCK SUGAR,ninos,446,2,50,EDP,Oriental Vainilla,GRANDEUR,https://cdn2.jomashop.com/media/catalog/product/cache/0ee3019724ce73007b606b54ba535a23/g/r/grandeur-unisex-tubbees-pink-sugar-edp-spray-17-oz-fragrances-5055810099404_2.jpg?width=546&height=546
 TUBBES CHERRY LUXE,ninos,$446,2,50,EDP,Frutal,GRANDEUR,https://cdn2.jomashop.com/media/catalog/product/g/r/grandeur-unisex-tubbees-cherry-luxe-edp-spray-17-oz-fragrances-5055810099411.jpg
-HARAMAIN AMBER OUD ROUGE,árabes,1953,1,60,EDP,Oriental Floral,AL HARAMAIN,AHP1037
-HARAMAIN AMBER OUD GOLD EDITION,árabes,1596,1,100,EDP,Oriental Vainilla,AL HARAMAIN,https://ss701.liverpool.com.mx/xl/1120665142.jpg
+AMBER OUD ROUGE,árabes,1953,1,60,EDP,Oriental Floral,AL HARAMAIN,AHP1037
+AMBER OUD GOLD EDITION,árabes,1596,0,100,EDP,Oriental Vainilla,AL HARAMAIN,https://ss701.liverpool.com.mx/xl/1120665142.jpg
 ANFAR PISTACHO KURAFA,árabes,1163,1,80,EDP,Gourmand,ANFAR,https://i5.walmartimages.com/asr/f45d7105-6493-4282-83e8-820ea5a1e8de.c70eeaf1f5bff98e3b502934ea34b2c3.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF&format=avif
 THE PRIDE OF ARMAF ADMIRAL,árabes,1512,1,100,EDP,Oriental Vainilla,ARMAF,https://http2.mlstatic.com/D_Q_NP_691053-MLA80264414634_112024-O.webp
 GAME OF SPADES FULL HOUSE,árabes,2590,1,100,EDP,Amaderado,JO MILANO PARIS,https://cazanovaonline.mx/cdn/shop/files/YSLBLACKOPIUMOVERRED_50dfcf80-e628-4bde-bc1a-597f3b902917.jpg?v=1748392530&width=1946
@@ -304,17 +304,17 @@ ODYSSEY AOUD,árabes,$952,1,100,edp,Amaderada,ARMAF,https://compraperfumesorigin
 CLUB DE NUIT MILESTONE,árabes,$1175,1,105,edp,Acuática,ARMAF,https://arome.mx/cdn/shop/files/perfume-club-de-nuit-milestone-unisex-de-armaf-edp-arome-mexico-1_800x.jpg?v=1725386275	
 CLUB DE NUIT WHITE IMPERIALE,árabes,$1195,1,105,edp,Floral,ARMAF,https://cazanovaonline.mx/cdn/shop/products/CDN_Imperiale_105ml_bottle_1024x1024_bab3726d-e408-4f9a-a798-5342dfb26eaf.webp?v=1679180387&width=1445
 CLUB DE NUIT MAN,árabes,$848,3,105,edp,Amaderada,ARMAF,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmlx4y0l8xqV0RC2xLFucVhL2XlaPgFbUZAQ&s	
-CLUB DE NUIT URBAN MAN,árabes,$1016,1,105,edp,Amaderada,ARMAF,https://www.perfumecenter.com.mx/cdn/shop/files/6294015102642.jpg?v=1724405864	
-CLUB DE NUIT WOMAN,árabes,$892,1,105,edp,Floral frutal,ARMAF,https://product-media.cdn.t1.com/product-channel/17612/2026/1/15/7f2d39c8f3a5afff2a83cbd6aa41f388.jpeg
+CLUB DE NUIT URBAN MAN,árabes,$1016,0,105,edp,Amaderada,ARMAF,https://www.perfumecenter.com.mx/cdn/shop/files/6294015102642.jpg?v=1724405864	
+CLUB DE NUIT WOMAN,árabes,$892,0,105,edp,Floral frutal,ARMAF,https://product-media.cdn.t1.com/product-channel/17612/2026/1/15/7f2d39c8f3a5afff2a83cbd6aa41f388.jpeg
 ASAD ELIXIR MEN,árabes,$1328,1,100,edp,Especiada,LATTAFA,https://http2.mlstatic.com/D_NQ_NP_720489-MLA100389988617_122025-O.webp
 YARA,árabes,$957,1,100,edp,Floral,LATTAFA,https://ss701.liverpool.com.mx/xl/1166551036.jpg	
 YARA MOI,árabes,$953,1,100,edp,Gourmand,LATTAFA,https://fimgs.net/mdimg/perfume/o.80722.jpg	
 YARA TOUS,árabes,$979,1,100,edp,Tropical,LATTAFA,https://cdn.fragrancenet.com/images/photos/1600x1600/470813.jpg
 YARA CANDY,árabes,$911,1,100,edp,Gourmand,LATTAFA,https://ss701.liverpool.com.mx/xl/1166551036.jpg	
 QAED AL FURSAN,árabes,$624,2,100,edp,Frutal,LATTAFA,https://ufemme.com/cdn/shop/files/Lattafa_Qaed_Al_Fursan_Man_90_ml_edp.png?v=1738090337	
-ECLAIRE,árabes,$1068,2,100,edp,Gourmand,LATTAFA,https://www.vivifragances.com/cdn/shop/files/IMG-2435.webp?v=1764558337&width=2200	
-THARWAH SILVER,árabes,$761,2,100,edp,Fresca,LATTAFA,https://laperfumeriadeleon.com/wp-content/uploads/2024/04/HO3496.jpg	
-KHAMRAH,árabes,$1000,1,100,edp,gourmand,LATTAFA,https://cdn11.bigcommerce.com/s-2vt02okold/products/3987/images/6107/MLATK__87961.1731099911.386.513.jpg?c=1
+ECLAIRE,árabes,$1068,1,100,edp,Gourmand,LATTAFA,https://www.vivifragances.com/cdn/shop/files/IMG-2435.webp?v=1764558337&width=2200	
+THARWAH SILVER,árabes,$761,1,100,edp,Fresca,LATTAFA,https://laperfumeriadeleon.com/wp-content/uploads/2024/04/HO3496.jpg	
+KHAMRAH,árabes,$1000,0,100,edp,gourmand,LATTAFA,https://cdn11.bigcommerce.com/s-2vt02okold/products/3987/images/6107/MLATK__87961.1731099911.386.513.jpg?c=1
 SAFWAAN L AUTRE MUSK,árabes,$696,1,100,edp,Almizclada,LATTAFA,https://compraperfumesoriginales.com/product-images/safwaan-l-autre-musk-62903605901415295.png
 BHARARA VIKING DUBAI,árabes,$2048,1,100,edp,Amaderada,BHARARA,https://m.media-amazon.com/images/I/41iPG8pxiYL._SL160_.jpg
 BHARARA KING,árabes,$2026,1,100,edp,Cítrica,BHARARA,https://cdn11.bigcommerce.com/s-2vt02okold/images/stencil/1280x1280/products/3781/8891/HBHAK__20413.1761935220.jpg?c=1	
@@ -326,10 +326,10 @@ L' AVENTURE INTENSE,árabes,$1131,1,100,edp,Amaderada,AL HARAMAIN,https://compra
 YUM YUM,árabes,$1635,1,100,edp,Gourmand,ARMAF,https://fimgs.net/mdimg/perfume/o.98717.jpg	
 CLUB DE NUIT BLING,árabes,$1848,1,105,edp,Amaderada,ARMAF,https://cazanovaonline.mx/cdn/shop/files/1_09552e0a-e6ae-4c54-8874-ddba50681377.webp?v=1762969278&width=1946
 ARMAF ODYSSEY SPECTRA,árabes,$1168,2,100,edp,Especiada,ARMAF,https://www.bellaroma.mx/wp-content/uploads/2025/12/armaf-odyssey-spectra-perfume-hombre-e1766000201212.webp	
-TA'WEEL,árabes,$761,1,100,edp,Amaderada,LATTAFA,https://www.costco.com.mx/medias/sys_master/products/h98/hd0/187466399547422.jpg	
+TA'WEEL,árabes,$761,0,100,edp,Amaderada,LATTAFA,https://www.costco.com.mx/medias/sys_master/products/h98/hd0/187466399547422.jpg	
 AL AMEED,árabes,$848,1,100,edp,Tropical,LATTAFA,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYio3dHlhzsxPzEgW85IvpDl4h6LkKlpUnCw&s	
-ISLAND BLISS,árabes,$1325,1,100,edp,Amaderada,ARMAF,https://cdn.fragrancenet.com/images/photos/600x600/501826.jpg
-CLUB DE NUIT INTENSE MAN,árabes,$914,1,105,edp,Amaderada,ARMAF,https://m.media-amazon.com/images/I/41WmEt7o+xL._SS400_.jpg
+ISLAND BLISS,árabes,$1325,1,100,edp,Amaderada,ARMAF,https://ss701.liverpool.com.mx/xl/1173842828.jpg
+CLUB DE NUIT INTENSE MAN,árabes,$914,0,105,edp,Amaderada,ARMAF,https://m.media-amazon.com/images/I/41WmEt7o+xL._SS400_.jpg
 ORIENTICA AMBER ROUGE,árabes,$2155,1,100,edp,Aromática,ORIENTICA,https://ss701.liverpool.com.mx/xl/1116466381.jpg
 ORIENTICA AMBER NOIR,árabes,$2741,1,100,edp,Oriental,ORIENTICA,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsbhfeSrTgdsvcXPiHlchqi-r06lpLUbaCug&s
 BHARARA BLOSSOM BOUQUET,árabes,$870,1,100,edp,Amaderada,BHARARA,https://i5.walmartimages.com/asr/65b580d2-edc4-49ce-b252-df4c90d5b194.0327cb3dc068665265d79e6f8fe9b9fd.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF	
