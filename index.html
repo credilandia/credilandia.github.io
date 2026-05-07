@@ -133,7 +133,7 @@ Descubre perfumes originales de diseñador y fragancias árabes.
 También contamos con crédito en tienda.
 </div>
 
-<!-- 🔥 BUSCADOR -->
+<!-- 🔥 BUSCADOR (AGREGADO) -->
 <input 
     type="text" 
     id="buscador" 
@@ -147,13 +147,13 @@ También contamos con crédito en tienda.
 <div class="categorias">
     <button onclick="mostrar('caballero')">Caballero</button>
     <button onclick="mostrar('dama')">Dama</button>
-    <button onclick="mostrar('arabes')">Árabes</button>
+    <button onclick="mostrar('árabes')">Árabes</button>
     <button onclick="mostrar('ninos')">Niños</button>
 </div>
 
 <div id="caballero" class="contenedor-productos"></div>
 <div id="dama" class="contenedor-productos" style="display:none;"></div>
-<div id="arabes" class="contenedor-productos" style="display:none;"></div>
+<div id="árabes" class="contenedor-productos" style="display:none;"></div>
 <div id="ninos" class="contenedor-productos" style="display:none;"></div>
 
 <div id="modalCredito" class="modal">
@@ -169,7 +169,7 @@ También contamos con crédito en tienda.
 function mostrar(cat) {
     document.getElementById("caballero").style.display = "none";
     document.getElementById("dama").style.display = "none";
-    document.getElementById("arabes").style.display = "none";
+    document.getElementById("árabes").style.display = "none";
     document.getElementById("ninos").style.display = "none";
 
     document.getElementById(cat).style.display = "grid";
@@ -222,7 +222,7 @@ function resaltarProducto(id){
     }, 800);
 }
 
-/* 🔥 BUSCADOR */
+/* 🔥 FUNCIÓN BUSCADOR (AGREGADA) */
 function filtrarProductos(){
     let input = document.getElementById("buscador").value.toLowerCase();
     let productos = document.querySelectorAll(".producto");
@@ -238,13 +238,7 @@ function filtrarProductos(){
     });
 }
 
-/* 🔥 GOOGLE SHEETS */
-
-const sheetID = '1g8OX4rbWjeE8GcINRXGgwM1lHJDgc40fyQ7rMT3ItG4';
-
-const url = `https://docs.google.com/spreadsheets/d/${sheetID}/export?format=csv`;
-
-fetch(url)
+fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/perfumes.csv')
 .then(res => res.text())
 .then(data => {
 
@@ -257,7 +251,7 @@ fetch(url)
         if(datos.length < 9) return;
 
         let nombre = datos[0]?.trim();
-        let categoria = datos[1]?.trim().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+        let categoria = datos[1]?.trim().toLowerCase();
         let precio = datos[2]?.replace(/["$ ]/g, '');
         let stock = parseInt(datos[3]);
         let ml = datos[4]?.trim();
@@ -314,9 +308,6 @@ fetch(url)
         setTimeout(() => { resaltarProducto(id); }, 1200);
     }
 
-})
-.catch(error => {
-    console.error("Error cargando Google Sheets:", error);
 });
 
 </script>
