@@ -133,7 +133,7 @@ Descubre perfumes originales de diseñador y fragancias árabes.
 También contamos con crédito en tienda.
 </div>
 
-<!-- 🔥 BUSCADOR (AGREGADO) -->
+<!-- 🔥 BUSCADOR -->
 <input 
     type="text" 
     id="buscador" 
@@ -222,7 +222,7 @@ function resaltarProducto(id){
     }, 800);
 }
 
-/* 🔥 FUNCIÓN BUSCADOR (AGREGADA) */
+/* 🔥 BUSCADOR */
 function filtrarProductos(){
     let input = document.getElementById("buscador").value.toLowerCase();
     let productos = document.querySelectorAll(".producto");
@@ -238,7 +238,13 @@ function filtrarProductos(){
     });
 }
 
-fetch('https://raw.githubusercontent.com/credilandia/credilandia.github.io/main/perfumes.csv')
+/* 🔥 GOOGLE SHEETS */
+
+const sheetID = '1g8OX4rbWjeE8GcINRXGgwM1lHJDgc40fyQ7rMT3ItG4';
+
+const url = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?tqx=out:csv`;
+
+fetch(url)
 .then(res => res.text())
 .then(data => {
 
