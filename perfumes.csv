@@ -1,5 +1,5 @@
 ﻿nombre,categoria, precio ,stock,ml,tipo,aroma,marca,imagen 
-ABERCROMBIE & FITCH FIERCE COLOGNE,caballero,1186,2,100,EDC,Amaderada,ABERCROMBIE & FITCH,https://nuestrasfragancias.com/wp-content/uploads/2022/04/Historia-para-Instagram-Nuevo-Sabor-Bubble-Tea-Fotografico-Blanco-2025-07-25T175830.106-e1753487959722.jpg
+ABERCROMBIE & FITCH FIERCE COLOGNE,caballero,1186,1,100,EDC,Amaderada,ABERCROMBIE & FITCH,https://nuestrasfragancias.com/wp-content/uploads/2022/04/Historia-para-Instagram-Nuevo-Sabor-Bubble-Tea-Fotografico-Blanco-2025-07-25T175830.106-e1753487959722.jpg
 ABERCROMBIE & FITCH FIRST INSTINCT,caballero,838,1,100,EDT,Amaderada,ABERCROMBIE & FITCH,https://www.perfumecenter.com.mx/cdn/shop/products/085715163103_ae882550-b9c6-497d-8b22-16c6957e95d8.jpg?v=1602236376
 ADIDAS VICTORY LEAGUE,caballero,314,1,100,EDT,Amaderada,ADIDAS,https://m.media-amazon.com/images/I/51cfPdxaUHL.jpg
 AFNAN SUPREMACY NOT ONLY INTENSE,árabes,1302,2,100,EDP,Amaderada,AFANA,https://http2.mlstatic.com/D_NQ_NP_838884-MLA84205599574_052025-O.webp
@@ -13,7 +13,7 @@ AMBER OUD ROUGE,árabes,1764,1,60,EDP,Oriental Floral,AL HARAMAIN,https://encryp
 AZLAN OUD BLEU,árabes,1932,2,100,EDP,Amaderada,AL HARAMAIN,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsU5RAz7FrMU55IoGQ59HVq8yyhS3nXUrcWQ&s
 L' AVENTURE INTENSE,árabes,1131,1,100,edp,Amaderada,AL HARAMAIN,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiE0q2IHTkuXvt90WLBJW8D7PZSxCvnzIY1w&s
 ANFAR PISTACHO KURAFA,árabes,1088,1,80,EDP,Gourmand,ANFAR,https://i5.walmartimages.com/asr/f45d7105-6493-4282-83e8-820ea5a1e8de.c70eeaf1f5bff98e3b502934ea34b2c3.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF&format=avif
-ANIMALE,dama,963,1,100,EDP,Chipre,ANIMALE,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIuiuRG4xcoj4y6nQ44DHugHxmoRQUoeAL7A&s
+ANIMALE,dama,963,0,100,EDP,Chipre,ANIMALE,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIuiuRG4xcoj4y6nQ44DHugHxmoRQUoeAL7A&s
 ANIMALE FOR MEN,caballero,775,0,100,EDT,Amaderada,ANIMALE,https://chedrauimx.vtexassets.com/arquivos/ids/67972276/892456000174_01.jpg?v=639123266341430000
 KING OF SEDUCTION,caballero,868,1,100,EDT,Amaderada,ANTONIO BANDERAS,https://cdn11.bigcommerce.com/s-2vt02okold/images/stencil/1280x1280/products/3606/7162/HKINS__49993.1731099904.jpg?c=1
 KING OF SEDUCTION ABSOLUTE,caballero,868,1,100,EDT,Amaderada,ANTONIO BANDERAS,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzxeMi2jXue3NgHz-9nN7g19X_GI_7FE6QVw&s
@@ -32,7 +32,7 @@ CLUB DE NUIT  SILLAGE,árabes,1175,1,105,edp,Floral,ARMAF,https://m.media-amazon
 CLUB DE NUIT BLING,árabes,1848,1,105,edp,Amaderada,ARMAF,https://cazanovaonline.mx/cdn/shop/files/1_09552e0a-e6ae-4c54-8874-ddba50681377.webp?v=1762969278&width=1946
 CLUB DE NUIT BLUE ICONIC,árabes,1790,1,105,EDT,Acuatica,ARMAF,https://www.perfumecenter.com.mx/cdn/shop/files/6294015164152.jpg?v=1722126082
 CLUB DE NUIT INTENSE MAN,árabes,1873,0,200,edp,Amaderada,ARMAF,https://www.perfumecenter.com.mx/cdn/shop/products/6085010044712_a12791e2-c250-48fd-a1d2-a2327b21cb27.jpg?v=1602236671
-CLUB DE NUIT MAN,árabes,848,3,105,edp,Amaderada,ARMAF,https://www.perfumecenter.com.mx/cdn/shop/products/6085010094144.jpg?v=1655021094
+CLUB DE NUIT MAN,árabes,848,2,105,edp,Amaderada,ARMAF,https://www.perfumecenter.com.mx/cdn/shop/products/6085010094144.jpg?v=1655021094
 CLUB DE NUIT MILESTONE,árabes,1175,1,105,edp,Acuática,ARMAF,https://hebmx.vtexassets.com/arquivos/ids/801149-800-800?v=638273095166300000&width=800&height=800&aspect=true
 CLUB DE NUIT URBAN MAN,árabes,1016,0,105,edp,Amaderada,ARMAF,https://www.mazaya.eg/media/catalog/product/6/2/6294015163513.jpeg?store=en&image-type=image
 CLUB DE NUIT WHITE IMPERIALE,árabes,1195,1,105,edp,Floral,ARMAF,https://cazanovaonline.mx/cdn/shop/products/CDN_Imperiale_105ml_bottle_1024x1024_bab3726d-e408-4f9a-a798-5342dfb26eaf.webp?v=1679180387&width=1445
@@ -44,7 +44,7 @@ ODYSSEY MANDARINSKY,árabes,1131,2,100,edp,Cítrica,ARMAF,https://ss701.liverpoo
 ODYSSEY TYRANT,árabes,805,1,100,edp,Amaderada,ARMAF,https://cdn.notinoimg.com/detail_main_lq/armaf/6294015160734_02-o/odyssey-tyrant___240507.jpg
 ODYSSEY WILD ONE GOLD,árabes,792,1,100,edp,Floral,ARMAF,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2yfjdoQZg0HzJEP_5tWVqoDjUPI98duFxIg&s
 THE PRIDE OF ARMAF ADMIRAL,árabes,1512,1,100,EDP,Oriental Vainilla,ARMAF,https://http2.mlstatic.com/D_Q_NP_691053-MLA80264414634_112024-O.webp
-YUM YUM,árabes,1635,1,100,edp,Gourmand,ARMAF,https://cdn11.bigcommerce.com/s-dvxgb24qz9/images/stencil/1280x1280/products/1406/3025/armaf-delights-yum-yum__14391.1747702259.jpg?c=1
+YUM YUM,árabes,1635,0,100,edp,Gourmand,ARMAF,https://cdn11.bigcommerce.com/s-dvxgb24qz9/images/stencil/1280x1280/products/1406/3025/armaf-delights-yum-yum__14391.1747702259.jpg?c=1
 AZZARO CHROME,caballero,1579,1,100,edp,Gourmand,AZZARO,https://amoramarket.com.mx/media/catalog/product/cache/c2a8098c7420ee3bfd4c0933185b5bf1/6/5/65031_3.jpg
 BENETTON ONE SUMMER FOR HIM,caballero,922,2,100,EDT,Amaderada,BENETTON,https://compraperfumesoriginales.com/product-images/united-dreams-one-summer-cafe-8433982013621.png
 BENETTON SISTERLAND BLUE NEROLI,dama,1201,1,80,EDT,Cítrico Floral,BENETTON,https://ss701.liverpool.com.mx/xl/1114716878_1p.jpg
@@ -60,7 +60,7 @@ SET BENETTON SITERLAND BLUE NEROLI 2PZS,dama,1256,1,80,EDT,Cítrico Floral,BENET
 SET BENETTON UNITED DREAMS TOGETHER FOR HIM 2PZ,caballero,1039,2,100,EST,Amaderada,BENETTON,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFLcAHsNyrDkVtYbyU1U87VR8aeMcmBwuwLA&s
 SET SISTERLAND PINK RASPBERRY 2PZS,dama,1256,1,80,EDT,Floral Frutal,BENETTON,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbaNN5SCmzIWzYShsnWqs2YURL7p1Z4yZEUg&s
 UNITED DREAMS AIM HIGH,caballero,1085,2,100,EDT,Amaderada,BENETTON,https://www.perfumecenter.com.mx/cdn/shop/products/8433982003400_6c7629f1-1918-4b03-befa-0de798ecff42.jpg?v=1602236844
-UNITED DREAMS LOVE YOURSELF,dama,1085,1,80,EDT,Floral Frutal,BENETTON,https://http2.mlstatic.com/D_NQ_NP_775249-MLA99735759999_112025-O.webp
+UNITED DREAMS LOVE YOURSELF,dama,1085,0,80,EDT,Floral Frutal,BENETTON,https://http2.mlstatic.com/D_NQ_NP_775249-MLA99735759999_112025-O.webp
 BENETTON FOREVER GREEN MAN,caballero,1085,2,100,EDT,Amaderada,BENETTON ,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpEqgSLgZIHb_owYYlrEt9lE8hBaXOv9gqiA&s
 BHARARA BLOSSOM BOUQUET,árabes,870,1,100,edp,Amaderada,BHARARA,https://i5.walmartimages.com/asr/65b580d2-edc4-49ce-b252-df4c90d5b194.0327cb3dc068665265d79e6f8fe9b9fd.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF
 BHARARA KING,árabes,2026,1,100,edp,Cítrica,BHARARA,https://cdn11.bigcommerce.com/s-2vt02okold/images/stencil/1280x1280/products/3781/8891/HBHAK__20413.1761935220.jpg?c=1
@@ -80,7 +80,7 @@ SET MR BURBERRY,caballero,2519,0,100/50,EDT,Amaderada,BURBERRY,https://http2.mls
 BVLGARI MAN GLACIAL ESSENCE,caballero,2992,1,100,EDP,Amaderada,BVLGARI,https://http2.mlstatic.com/D_Q_NP_941256-MLA84480408855_052025-O.webp
 BVLGARI MAN RAIN ESSENCE,caballero,2992,1,100,EDP,Amaderada,BVLGARI,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLUPe8mHxOPb1F4FfKnw83xwjOmiw4IFgm4g&s
 BVLGARI MAN TERRAE ESSENCE,caballero,2992,0,100,EDP,Amaderada,BVLGARI,https://m.media-amazon.com/images/I/510OARyCB+L.jpg
-AMOR AMOR,dama,1265,1,100,EDT,Floral Frutal,CACHAREL,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQF9sRp23y3Vy1_ycFtpgHfKiK4bx9h_oFtg&s
+AMOR AMOR,dama,1265,0,100,EDT,Floral Frutal,CACHAREL,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQF9sRp23y3Vy1_ycFtpgHfKiK4bx9h_oFtg&s
 CK BE,caballero,1070,3,100,EDT,Amaderada,CALVIN KLEIN,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3eZeyqURTYvHgNHYkIuNrjHI0pKXsdcMgEA&s
 ETERNITY FOR MEN,caballero,1209,2,100,EDT,Amaderada,CALVIN KLEIN,https://i5.walmartimages.com/asr/615905e3-ffb6-4fe9-8a56-9fc8b561980e.11f4599d5adc40a4e191ccb4054a5926.jpeg
 ETERNITY FOR WOMAN,dama,1325,3,100,EDP,Floral,CALVIN KLEIN,https://fimgs.net/mdimg/perfume-thumbs/dark-375x500.257.avif
@@ -95,10 +95,10 @@ CARLO CORINTO EAU BLEUE,caballero,1054,2,100,EDT,Amaderada,CARLO CORINTO,https:/
 CARLO CORINTO ONE FOREVER MAN,caballero,1054,1,100,EDP,Amaderada,CARLO CORINTO,https://ufra.com.mx/media/catalog/product/cache/c7b16b3f266fbba2cc4e554996ed3078/1/0/1050060034_1.jpg
 CARLO CORINTO ONE FOREVER WOMAN,dama,1054,1,100,EDP,Floral,CARLO CORINTO,https://ufra.com.mx/media/catalog/product/cache/c7b16b3f266fbba2cc4e554996ed3078/1/0/1050059034_1.jpg
 CARLO CORINTO ONE MAN,caballero,1054,2,100,EDP,Amaderada,CARLO CORINTO,https://www.perfumecenter.com.mx/cdn/shop/products/7501095633362.jpg?v=1673779425
-CARLO CORINTO WILD ,caballero,1054,2,100,EDP,Amaderada,CARLO CORINTO,https://resources.sanborns.com.mx/imagenes-sanborns-ii/1200/7501095639401.jpg
+CARLO CORINTO WILD ,caballero,1054,1,100,EDP,Amaderada,CARLO CORINTO,https://resources.sanborns.com.mx/imagenes-sanborns-ii/1200/7501095639401.jpg
 SET CARLO CORINTO DARK 3PZS,caballero,1116,1,100,EDP,Amaderada,CARLO CORINTO,https://i5.walmartimages.com/asr/a5c10cc5-9271-4ec0-b665-37a43f5d905d.9fe4070e17a81437ecfbc75afaa01429.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF
 SET CARLO CORINTO WHITE GOLD 3PZS,dama,1077,1,100,EDT,Floral,CARLO CORINTO,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFQtI7hZ7l2aJiNArwQ-VcXCY-AqNjRUA5fw&s
-212,dama,3100,1,100,EDT,Floral,CAROLINA HERRERA,https://m.media-amazon.com/images/I/51TKPeFy6sL._UF1000.000_QL80_.jpg
+212,dama,3100,0,100,EDT,Floral,CAROLINA HERRERA,https://m.media-amazon.com/images/I/51TKPeFy6sL._UF1000.000_QL80_.jpg
 212 HEROES ,caballero,2705,1,90,EDT,Amaderada,CAROLINA HERRERA,https://www.costco.com.mx/medias/sys_master/products/hb4/h11/119653214814238.jpg
 212 HEROES FOREVER YOUNG,dama,3240,3,80,EDP,Floral Frutal,CAROLINA HERRERA,https://i5.walmartimages.com/asr/0537f990-2ab5-4882-9058-6521db1e1494.b39887efaae230a69d61ca3e973bfb65.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF
 212 MEN MTV,caballero,2410,1,100,EDT,Amaderada,CAROLINA HERRERA,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsv3MEGvl1XpFeXbOZquDEr4I0lSHzvJQF0w&s
@@ -123,11 +123,11 @@ VERY GOOD GIRL,dama,3875,2,80,EDP,Floral Frutal,CAROLINA HERRERA,https://fimgs.n
 VERY GOOD GIRL GLAM,dama,3751,3,80,EDP,Floral Frutal,CAROLINA HERRERA,https://arome.mx/cdn/shop/files/perfume-very-good-girl-glam-para-mujer-de-carolina-herrera-edp-80ml-arome-mexico-1_1200x1200.png?v=1725559542
 Z4 SET GOOD GIRL BLUSH,dama,3953,5,80,EDP,Floral,CAROLINA HERRERA,https://karenajerabeautystore.com/cdn/shop/files/22AEB8E7-66FA-4E1A-BE48-30648EA976DD.webp?v=1730357259
 CHANEL N°5,dama,7742,1,200,EDP,Floral Aldehídico,CHANEL,https://http2.mlstatic.com/D_NQ_NP_611285-MLM75936605547_042024-O.webp
-COCO CHANEL,dama,4952,2,100,EDP,Oriental,CHANEL,https://fimgs.net/mdimg/perfume-thumbs/375x500.609.jpg
+COCO CHANEL,dama,4952,1,100,EDP,Oriental,CHANEL,https://fimgs.net/mdimg/perfume-thumbs/375x500.609.jpg
 COACH,dama,1845,2,90,EDP,Floral,COACH,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKi5OnSk8zGStNz8PDQc6y20-mCHIoZxI2PA&s
 COACH DREAMS SUNSET,dama,1736,2,90,EDP,Floral Frutal,COACH,https://coachmx.vteximg.com.br/arquivos/ids/180494-720-720/C5196-L38--90ML_2.jpg?v=637926509611700000
-COACH FLORAL,dama,1845,2,90,EDP,Floral,COACH,https://http2.mlstatic.com/D_Q_NP_857753-MLA110279048603_042026-O.webp
-COACH LOVE,dama,1661,1,90,edp,Cítrica,COACH,https://ss701.liverpool.com.mx/xl/1146896622_1p.jpg
+COACH FLORAL,dama,1845,1,90,EDP,Floral,COACH,https://http2.mlstatic.com/D_Q_NP_857753-MLA110279048603_042026-O.webp
+COACH LOVE,dama,1661,0,90,edp,Cítrica,COACH,https://ss701.liverpool.com.mx/xl/1146896622_1p.jpg
 COACH NEWY YORK,caballero,1681,1,90,edp,Floral frutal,COACH,https://abclive1.s3.amazonaws.com/31a7f8a4-c7f7-4d3a-81a6-26f396972754/productimage/P-3386460154277___L.jpg
 SET COACH NEW YORK 3PZS,dama,2015,1,90,EDP,Floral,COACH,https://i5.walmartimages.com/asr/19dedfec-2c03-48dc-84c2-772cd1794bcb.4952ec820dfba2245555eb448aa349a3.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF
 CUBA ROYAL,caballero,314,2,100,EDT,Amaderada,CUBA,https://ss701.liverpool.com.mx/xl/1118245420.jpg
@@ -147,7 +147,7 @@ DKNY BE DELICIOUS ORCHARD ST,dama,1504,1,100,EDP,Floral Frutal,DKNY,https://fimg
 DOLCE & GABBANA,caballero,2519,1,100,EDP,Amaderada,DOLCE & GABBANA,https://chapurmx.vtexassets.com/arquivos/ids/361823/5763938-2.jpg?v=638515011517300000
 DOLCE & GABBANA DEVOTION,dama,3462,1,100,edp,Aromática,DOLCE & GABBANA,https://cdn.fragrancenet.com/images/photos/600x600/430036.jpg
 DOLCE & GABBANA LIGHT BLUE,caballero,2015,1,125,EDT,Acuatica,DOLCE & GABBANA,https://beautyfreeshop.com.mx/cdn/shop/files/5013103323.jpg?v=1756322198
-DOLCE & GABBANA LIGHT BLUE,dama,2170,1,100,EDT,Cítrico Frutal,DOLCE & GABBANA,https://www.perfumecenter.com.mx/cdn/shop/files/8057971180318_jpg_b7fb2922-aa48-46e1-b59c-265d9bcc5bcf.webp?v=1684018280
+DOLCE & GABBANA LIGHT BLUE,dama,2170,0,100,EDT,Cítrico Frutal,DOLCE & GABBANA,https://www.perfumecenter.com.mx/cdn/shop/files/8057971180318_jpg_b7fb2922-aa48-46e1-b59c-265d9bcc5bcf.webp?v=1684018280
 DOLCE & GABBANA POUR HOMME,caballero,1661,1,125,edt,Floral,DOLCE & GABBANA,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyFeaZqiqApqVfzFsvsdhe1tM6IXZ_0VviOA&s
 DOLCE & GABBANA THE ONE,dama,2674,2,75,EDP,Oriental Floral,DOLCE & GABBANA,https://www.dolcegabbana.com/dw/image/v2/BKDB_PRD/on/demandware.static/-/Sites-15/default/dwebe891f0/images/zoom/VP7117VP103_9V000_0.jpg?sw=740&sh=944
 DOLCE Y GABBANA DARK CHERRY,dama,3026,2,100,EDP,Oriental Frutal,DOLCE & GABBANA,https://m.media-amazon.com/images/I/71lwV74ewbL._AC_UF1000.000_QL80_.jpg
@@ -187,7 +187,7 @@ GUESS,dama,806,1,75,EDP,Floral,GUESS,https://encrypted-tbn0.gstatic.com/images?q
 GUESS 1981,dama,1339,1,100,EDT,Floral Amaderado,GUESS,https://http2.mlstatic.com/D_NQ_NP_831876-MLU69343758259_052023-O.webp
 GUESS 1981 INDIGO MEN,caballero,845,2,100,EDT,Amaderada,GUESS,https://cdn11.bigcommerce.com/s-2vt02okold/images/stencil/1280x1280/products/3552/4203/HGUE1981I__48350.1731099901.jpg?c=1
 GUESS 1981 LOS ANGELES MEN ,caballero,845,1,100,EDT,Amaderada,GUESS,https://nuestrasfragancias.com/wp-content/uploads/2024/05/Guess-1981-Los-Angeles-100ml-EDT-Caballero.webp
-GUESS GIRL,dama,711,1,100,EDT,Floral Frutal,GUESS,https://m.media-amazon.com/images/I/71k8dK0H-SL.jpg
+GUESS GIRL,dama,711,0,100,EDT,Floral Frutal,GUESS,https://m.media-amazon.com/images/I/71k8dK0H-SL.jpg
 GUESS MEN,caballero,806,1,75,EDT,Amaderada,GUESS,https://ss701.liverpool.com.mx/xl/1109327057.jpg
 GUESS SEDUCTIVE HOMME BLUE,caballero,806,1,100,EDT,Acuatica,GUESS,https://images.wehkamp.nl/i/wehkamp/16100188_eb_01/guess-seductive-homme-blue-eau-de-toilette-100-ml-085715320414.jpg?w=1024
 GUESS SEDUCTIVE HOMME NOIR MEN,caballero,806,1,100,EDT,Amaderada,GUESS,https://ss701.liverpool.com.mx/xl/1110797547.jpg
@@ -196,12 +196,12 @@ GUESS UOMO INTENSO EST 1981,caballero,868,0,100,EDP,Amaderada,GUESS,https://ufra
 SET GUESS 1981 LOS ANGELES FOR MEN 3PZS,caballero,992,1,100,EDT,Amaderada,GUESS,https://i5.walmartimages.com/asr/15767827-e05d-430a-bda5-ec60a77f5542.43e5b630ce690f9b4c675661c92f4be0.jpeg
 SET GUESS GIRL BELLE 3PZS,dama,961,0,100,EDT,Floral Frutal,GUESS,https://perfumeriasublime.com/cdn/shop/files/MGUEGBSET3_9c57322c-18c0-468f-ba11-ebe03f4926dd_2048x.jpg?v=1772811565
 SET GUESS MAN GOLD 3PZAS,caballero,893,1,75,EDT,Amaderada,GUESS,https://i5.walmartimages.com/asr/e1cfac92-19cc-439a-b480-b490cfc46e2f.3139a78ed7ea2ffa6b87a449768bdc3b.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF
-DRAKKAR NOIR,caballero,797,2,100,edt,Aromática,GUY LAROCHE,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPqJ5XoDE6XHtp7K6CV1Rnwd8oNZ9E07__Yw&s
+DRAKKAR NOIR,caballero,797,1,100,edt,Aromática,GUY LAROCHE,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPqJ5XoDE6XHtp7K6CV1Rnwd8oNZ9E07__Yw&s
 HALLOWEEN,dama,1085,0,100,EDT,Floral Oriental,HALLOWEEN,https://resources.sanborns.com.mx/imagenes-sanborns-ii/1200/8431754342016.jpg
-HALLOWEEN BLUE DROP,dama,1211,1,100,EDT,Acuático Floral,HALLOWEEN,https://m.media-amazon.com/images/I/71qC1vzAtjL.jpg
+HALLOWEEN BLUE DROP,dama,1211,0,100,EDT,Acuático Floral,HALLOWEEN,https://m.media-amazon.com/images/I/71qC1vzAtjL.jpg
 BOSS BOTTLED,caballero,1767,2,100,EDT,Amaderada,HUGO BOSS,https://ss701.liverpool.com.mx/xl/1071924891.jpg
 BOSS BOTTLED ,caballero,2015,2,100,EDP,Amaderada,HUGO BOSS,https://resources.sanborns.com.mx/imagenes-sanborns-ii/1200/3614229828542_3.jpg
-BOSS BOTTLED INFINITE,caballero,1891,2,100,EDP,Amaderada,HUGO BOSS,https://resources.sanborns.com.mx/imagenes-sanborns-ii/1200/3614228220897_2.jpg
+BOSS BOTTLED INFINITE,caballero,1891,1,100,EDP,Amaderada,HUGO BOSS,https://resources.sanborns.com.mx/imagenes-sanborns-ii/1200/3614228220897_2.jpg
 BOSS BOTTLED TONIC,caballero,1767,2,100,EDT,Amaderada,HUGO BOSS,https://www.perfumecenter.com.mx/cdn/shop/products/8005610255668_41e3046f-dece-402f-87b0-737d48f0828a.jpg?v=1602238501
 BOSS BOTTLED UNLIMITED,caballero,1767,2,100,EDT,Amaderada,HUGO BOSS,https://resources.sanborns.com.mx/imagenes-sanborns-ii/1200/737052766775.jpg?scale=500&qlty=75
 BOSS FEMME,dama,1457,1,75,EDP,Floral,HUGO BOSS,https://arome.mx/cdn/shop/files/perfume-boss-femme-para-mujer-de-hugo-boss-eau-de-parfum-75ml-arome-mexico-1_1000x.jpg?v=1725380947
@@ -210,7 +210,7 @@ BOSS MAN,caballero,1426,2,100,EDT,Amaderada,HUGO BOSS,https://beautyfreeshop.com
 BOSS NUMBER ONE,caballero,1077,1,100,EDT,Amaderada,HUGO BOSS,https://http2.mlstatic.com/D_NQ_NP_814679-MLU71064369760_082023-O.webp
 BOSS THE SCENT FOR HER,dama,1823,1,100,EDP,Oriental Floral,HUGO BOSS,https://www.perfumecenter.com.mx/cdn/shop/products/8005610298924.jpg?v=1602238533
 HUGO BOSS WOMAN,dama,1442,1,90,EDP,Floral Frutal,HUGO BOSS,https://m.media-amazon.com/images/I/31AcyEwHV1L.jpg
-HUGO DEEP RED,dama,1044,1,90,edp,Acuática,HUGO BOSS,https://www.perfumecenter.com.mx/cdn/shop/products/737052683553_9ba1ce43-259c-440c-a54a-add17308c0a0.jpg?v=1602238543
+HUGO DEEP RED,dama,1044,0,90,edp,Acuática,HUGO BOSS,https://www.perfumecenter.com.mx/cdn/shop/products/737052683553_9ba1ce43-259c-440c-a54a-add17308c0a0.jpg?v=1602238543
 HUGO GREEN ,caballero,1643,2,125,EDT,Amaderada,HUGO BOSS,https://arome.mx/cdn/shop/files/hugo-verde-737052515045_800x.png?v=1729794584
 HUGO WOMAN EXTREME,dama,1302,1,75,EDP,Floral Frutal,HUGO BOSS,https://compraperfumesoriginales.com/product-images/hugo-woman-extreme-737052987569.png
 HUGO XX,dama,1643,2,100,EDT,Floral Frutal,HUGO BOSS,https://www.perfumecenter.com.mx/cdn/shop/products/737052130729_e5dc5d18-d243-4294-8f47-8483af707424.jpg?v=1602238575
@@ -222,7 +222,7 @@ JEAN PAUL GAULTIER SCANDAL ABSOLU,dama,3371,2,80,PARFUM,Oriental Dulce,JEAN PAUL
 SCANDAL INTENSE ,caballero,3085,1,100,EDP,Amaderada,JEAN PAUL GAULTIER,https://arome.mx/cdn/shop/files/perfume-scandal-para-hombre-de-jean-paul-gaultier-edp-100ml-arome-mexico-2_1200x1200.jpg?v=1721934413
 SCANDAL LE PARFUM INTENSE,dama,3395,1,80,EDP,Oriental Dulce,JEAN PAUL GAULTIER,https://www.costco.com.mx/medias/sys_master/products/h7a/hdd/155946353262622.jpg
 SET JEAN PAUL GAULTIER SCANDAL ABSOLU 3PZS,dama,4123,1,80,EDP,Oriental Dulce,JEAN PAUL GAULTIER,https://http2.mlstatic.com/D_NQ_NP_791052-MLM88515703947_072025-O.webp
-GAME OF SPADES FULL HOUSE,árabes,2868,1,100,EDP,Amaderado,JO MILANO PARIS,https://cazanovaonline.mx/cdn/shop/files/YSLBLACKOPIUMOVERRED_50dfcf80-e628-4bde-bc1a-597f3b902917.jpg?v=1748392530&width=1946
+GAME OF SPADES FULL HOUSE,árabes,2868,0,100,EDP,Amaderado,JO MILANO PARIS,https://cazanovaonline.mx/cdn/shop/files/YSLBLACKOPIUMOVERRED_50dfcf80-e628-4bde-bc1a-597f3b902917.jpg?v=1748392530&width=1946
 LIVE COLOR FULLY LUXE,dama,1100,1,100,EDP,Especiado,KATE SPADE,https://http2.mlstatic.com/D_NQ_NP_750146-MLM80458802473_112024-O.webp
 PURR,dama,841,1,100,ESDP,Floral,KATY PERRY,https://fimgs.net/mdimg/perfume-thumbs/dark-375x500.10543.avif
 KATY PERRY MEOW,dama,657,0,100,EDP,Floral Frutal,KATY PERRY,https://i.ebayimg.com/images/g/DU0AAOSw1G9kwwhK/s-l225.jpg
@@ -231,7 +231,7 @@ FLOWER,dama,1860,3,100,EDP,Floral,KENZO,https://ss701.liverpool.com.mx/xl/112397
 LACOSTE BOOSTER,caballero,1542,1,125,EDT,Amaderada,LACOSTE,https://resources.sanborns.com.mx/products/cdn/product-channel/15036/2025/7/20/b3bc8a36b77273977f314f59390174b8.png?scale=500&qlty=75
 LACOSTE FEMME,dama,1542,1,90,EDP,Floral Amaderado,LACOSTE,https://i5.walmartimages.com/asr/502dc303-643e-4a10-b133-3e307b4e5a79.234dfbfb31445060b7659d8741960ece.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF
 LACOSTE FRENCH PANACHE POUR ELLE,dama,1783,1,90,EDT,Floral,LACOSTE,https://www.perfumecenter.com.mx/cdn/shop/files/3614228228671.jpg?v=1723021935
-LACOSTE L 12. 12 BLANC,caballero,1807,1,100,EDT,Amaderada,LACOSTE,https://cdn2.jomashop.com/media/catalog/product/l/a/lacoste-mens-eau-de-lacoste-l1212-white-edt-spray-34-oz-fragrances-3386460149082.jpg
+LACOSTE L 12. 12 BLANC,caballero,1807,0,100,EDT,Amaderada,LACOSTE,https://cdn2.jomashop.com/media/catalog/product/l/a/lacoste-mens-eau-de-lacoste-l1212-white-edt-spray-34-oz-fragrances-3386460149082.jpg
 LACOSTE L.12.12 SPARKLING,dama,2085,2,100,EDT,Floral Dulce,LACOSTE,https://resources.sanborns.com.mx/imagenes-sanborns-ii/1200/8005610295558_2.jpg
 LACOSTE PURE POUR ELLE ROSE,dama,2240,1,100,EDP,Floral,LACOSTE,https://arome.mx/cdn/shop/files/MEAULS__15301_1000x.jpg?v=1778189946
 LACOSTE PURE POUR ELLE ROSE INTENSE,dama,2085,2,100,EDT,Floral,LACOSTE,https://ufra.com.mx/media/catalog/product/cache/c7b16b3f266fbba2cc4e554996ed3078/4/5/45994_1.jpg
@@ -258,9 +258,9 @@ QAED AL FURSAN,árabes,624,2,100,edp,Frutal,LATTAFA,https://http2.mlstatic.com/D
 SAFWAAN L AUTRE MUSK,árabes,696,1,100,edp,Almizclada,LATTAFA,https://compraperfumesoriginales.com/product-images/safwaan-l-autre-musk-62903605901415295.png
 TA'WEEL,árabes,761,0,100,edp,Amaderada,LATTAFA,https://http2.mlstatic.com/D_NQ_NP_718560-MLA93963232085_102025-O.webp
 THARWAH SILVER,árabes,761,1,100,edp,Fresca,LATTAFA,https://ss701.liverpool.com.mx/xl/1143508907_1p.jpg
-YARA,árabes,957,1,100,edp,Floral,LATTAFA,https://fraganciasfiord.com.mx/wp-content/uploads/2024/02/Perfume-YARA-original-de-Lattafa-en-Fragancias-Fiord.jpg
-YARA CANDY,árabes,911,1,100,edp,Gourmand,LATTAFA,https://nuestrasfragancias.com/wp-content/uploads/2024/10/YARA-CANDY.jpg
-YARA MOI,árabes,953,1,100,edp,Gourmand,LATTAFA,https://surtidoradepartamental.vtexassets.com/arquivos/ids/661604-800-914?v=638660018434800000&width=800&height=914&aspect=true
+YARA,árabes,979,1,100,edp,Floral,LATTAFA,https://fraganciasfiord.com.mx/wp-content/uploads/2024/02/Perfume-YARA-original-de-Lattafa-en-Fragancias-Fiord.jpg
+YARA CANDY,árabes,979,1,100,edp,Gourmand,LATTAFA,https://nuestrasfragancias.com/wp-content/uploads/2024/10/YARA-CANDY.jpg
+YARA MOI,árabes,979,0,100,edp,Gourmand,LATTAFA,https://surtidoradepartamental.vtexassets.com/arquivos/ids/661604-800-914?v=638660018434800000&width=800&height=914&aspect=true
 YARA TOUS,árabes,979,1,100,edp,Tropical,LATTAFA,https://cdn.fragrancenet.com/images/photos/1600x1600/470813.jpg
 7 LOEWE,dama,2790,1,100,EDT,Amaderado,LOEWE,https://priceonline.mx/cdn/shop/files/2054_-_7_De_Loewe_Caballero_Loewe_100_ml_Edt_spray_3_1200x.jpg?v=1768602143
 AGUA DE LOEWE EL,dama,2565,1,100,EDP,Cítrico,LOEWE,https://m.media-amazon.com/images/I/61aBpV+V8iL.jpg
@@ -277,7 +277,7 @@ MOSCHINO FRESH PINK,dama,1705,2,100,EDT,Floral Frutal,MOSCHINO,https://resources
 MOSCHINO TOY 2,dama,1953,3,100,EDP,Floral,MOSCHINO,https://ss701.liverpool.com.mx/xl/1082227853_1p.jpg
 MOSCHINO TOY 2 BUBBLEGUM,dama,1814,3,100,EDT,Floral Frutal,MOSCHINO,https://perfumegallery.com.mx/cdn/shop/files/8011003864089-3_ca2ce6b6-2b62-4114-a99e-ece580d15a0b.jpg?v=1692300123
 MOSCHINO TOY BOY,caballero,2539,5,100,EDP,Amaderada,MOSCHINO,https://resources.sanborns.com.mx/imagenes-sanborns-ii/1200/8011003845132.jpg
-SET MOSCHINO TOY 2 BUBBLE GUM,dama,2023,3,100,EDP,Floral Frutal,MOSCHINO,https://http2.mlstatic.com/D_NQ_NP_650624-MLU73062437481_112023-O.webp
+SET MOSCHINO TOY 2 BUBBLE GUM,dama,2023,2,100,EDP,Floral Frutal,MOSCHINO,https://http2.mlstatic.com/D_NQ_NP_650624-MLU73062437481_112023-O.webp
 ALIEN,dama,1953,2,90,EDT,Oriental Ambarado,MUGLER,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN7H4dDxr83_6JXqaZYdjL1enQVaFxv6UIMA&s
 NAUTICA BLUE,caballero,457,2,100,EDT,Acuatica,NAUTICA,https://ss701.liverpool.com.mx/xl/1062071750.jpg
 NAUTICA CLASSIC,caballero,457,0,100,EDT,Acuatica,NAUTICA,https://cdn11.bigcommerce.com/s-2vt02okold/images/stencil/1280x1280/products/2874/5234/HNAU__27724.1731099889.jpg?c=1
@@ -342,7 +342,7 @@ SALVATORE FERRAGAMO POUR HOMME,caballero,930,2,100,EDT,Amaderada,SALVATORE FERRA
 SET SALVATORE FERRAGAMO POUR HOMME 3PZS,caballero,915,1,100,EDT,Amaderada,SALVATORE FERRAGAMO,https://http2.mlstatic.com/D_Q_NP_605728-MLA84180790500_052025-O.webp
 TOMMY GIRL,dama,1194,0,100,EDT,Floral,TOMMY HILFIGER,https://tommymx.vtexassets.com/arquivos/ids/194550/223P00000-1.jpg?v=637087602296900000
 SET TOUS TOUCH 3PZS,dama,1860,1,100,EDT,Floral,TOUS,https://ufra.com.mx/media/catalog/product/cache/c7b16b3f266fbba2cc4e554996ed3078/0/4/04735037_1.jpg
-TOUS,dama,1109,1,90,EDP,Floral,TOUS,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSGapPwl0phVblJMNX-1NiAk-B7d8AO-PbrQ&s
+TOUS,dama,1109,0,90,EDP,Floral,TOUS,https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSGapPwl0phVblJMNX-1NiAk-B7d8AO-PbrQ&s
 TOUS TOUCH,dama,1271,0,100,EDT,Floral,TOUS,https://www.perfumecenter.com.mx/cdn/shop/products/8437006654296_58d74d27-b1e5-4c6e-a94a-f0d7e3c8bb3a.jpg?v=1602240024
 YOUR POWER TOUS,dama,1067,0,100,EDT,Floral,TOUS,https://i5.walmartimages.com/asr/77c269af-9c2f-42f6-a0bc-def443c54a51.a1b75fd58343cf6917ce6f1fb1bf196e.jpeg
 VALENTINO UOMO,caballero,3534,1,100ML,EDT,Amaderada,VALENTINO,https://i5.walmartimages.com/asr/1e6c2d15-7b50-400f-91f6-ee188277798e.dcf310f2291a261894f220bfb8201fb3.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF
